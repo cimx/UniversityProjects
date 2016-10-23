@@ -1,0 +1,1688 @@
+body {
+	/* permite que o main ocupe o ecra todo */
+	margin: 0px;
+	/* muda o cursor */
+	cursor: pointer !important;
+	font-family: sans-serif;
+}
+
+button:hover {
+	cursor:pointer;
+}
+
+/* Div para a pagina toda */
+#main {
+	position: fixed; 
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	background-color: rgba(0,0,0, 0.9);
+}
+
+/* Ecra do Barista */
+#home {
+	/* tamanho do div*/
+	width: 1200px;
+	height: 700px;
+	/* centrar div */
+	top: 50%;
+	left: 50%;
+	position: fixed;
+	transform: translate(-50%, -50%);
+	background-image: url("icons/background.jpg");
+	background-size: 100% 100%;
+	border: 2px solid black;
+}
+
+/* Ecra inicial */
+#ecra_inicial {
+	margin:0;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	vertical-align: middle;
+}
+
+#ecra_inicial h1 {
+	margin: 0;
+	color: white;
+	text-shadow: 2px 0 0 #000, 0 -2px 0 #000, 0 2px 0 #000, -2px 0 0 #000;
+	position: absolute;
+	top: 44%;
+	left:28%;
+	font-size: 50px;
+}
+
+#disable_buttons_empregado, #disable_buttons_cancTaxi,
+#disable_buttons_customBebida, #disable_buttons_customComida,
+#disable_buttons_progressoBebida, #disable_buttons_progressoComida,
+#disable_buttons_concluirPedidoB, #disable_buttons_pagar,
+#disable_buttons_partilhar_musica, #disable_buttons_ajuda{
+	width: 1200px;
+	position: absolute;
+	height: 700px;
+	top: 50%;
+	left: 50%;
+	position: fixed;
+	transform: translate(-50%, -50%);
+	background-color: rgba(255,255,255,0.5);
+	display: none;
+}
+#disable_buttons_ajuda p{
+	text-align: left;
+}
+
+/* Barra lateral esquerda */
+#sidebar {
+	display:none;
+	float: left;
+	margin: 0;	
+	width: 339px;
+	height: 700px;
+}
+
+/* Div do conteudo */
+.content {
+	float: right;
+	margin: 0;
+	width: 860px; /* 780px - 4px da border*/
+	height: 700px;
+	text-align: center;
+}
+
+/* Botao de chamar o empregado */
+.empregado {
+	width: 80px;
+	height: 80px;
+	position: absolute;
+	bottom: 30px;
+	right: 40px;	
+}
+.empregado img {
+	max-width:120%;
+	max-height:120%;
+	display: block;
+	margin: 7px 20px 15px 15px;
+}
+
+/* Botao de voltar para tras */
+.voltar {
+	width: 75px;
+	height: 75px;
+	margin: 0px 5px 5px 0px;
+	/* canto inferior direito */
+	position: absolute;
+	bottom: 0;
+	right: 100px;
+}
+.voltar img {
+	max-width: 85%;
+	max-height: 85%;
+	display: block;
+}
+
+/* Botao de voltar para o ecrã principal */
+.home_screen {
+	width: 40px;
+	height: 40px;
+	margin: 40px;
+	/* canto superior direito */
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.home_screen img {
+	max-width: 100%;
+	max-height: 100%;
+	display: block;
+	margin: 5px;
+}
+
+/* Ecra inicial */
+#inicial.content {
+  	background-color: rgba(255,255,255,0.7);
+	display: inline-block;	
+}
+#musica_aTocar img{
+	margin-top: 20px;
+	width: 630px;
+	height: 65px;
+}
+
+/* Menu Bebidas */
+#menu_bebidas.content, #menu_comida.content, #menu_transportes,
+#menu_metro, #menu_autocarro, #menu_comboio, #menu_taxi2, #menu_taxi1,
+#menu_sair_1, #menu_sair_3, #menu_sair_1b, #menu_sair_2,
+#menu_musica, #menu_top_musica{
+	background-color: rgba(255,255,255,0.7); 
+	display: none;
+}
+
+/* Divs da sidebar */
+
+/* Total a pagar */
+#total {
+	display:inline-block;
+	margin: 10px 40px 0px 40px; 
+	width: 265px;
+	height: 35px;
+}
+#a_pagar {
+    display: inline-block;
+    padding-top: 7px;
+    height: 30px;
+    width: 131px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;	
+    color: rgba(255,255,255,1);
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+    
+}
+#pagar_total {
+	display: inline-block;
+    position: absolute;
+    left: 181px;
+    top: 80px;
+    color: rgba(255,255,255,0.3);
+    border: 4px solid rgba(255,255,255,0.3);
+    font-size: 24px;
+    width: 115px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+	border-radius:6px;
+}
+
+/* Funcionalidades */
+#sidebar .sidebar_col_1 {
+	display:inline-block;
+	margin: 20px 5px 0px 40px;
+}
+
+#sidebar .sidebar_col_2 {
+	display:inline-block;
+	margin: 20px 0px 0px 5px;
+}
+
+#sidebar .funcionalidade {
+	width: 125px;
+	height: 125px;
+	margin-bottom: 25px;
+	vertical-align: middle;
+	text-align: center;
+}
+
+#sidebar .funcionalidade img {
+	max-width: 100%;
+	max-height: 100%;
+	display: block;
+	border-radius: 15px;
+}
+
+#sidebar .funcionalidade:nth-child(3){
+	margin-bottom:0;
+}
+
+#sidebar .sidebar_row {
+	width: 260px;
+	height: 100px;
+	margin-left: 45px;
+}
+
+#nivel_alcool{
+	display: inline-block;
+	margin-top: 30px;
+}
+#nivel_alcool img {
+	width: 225px;
+	height: 65px;
+	margin-left: 15px;
+}
+.divbebidas, .divcomidas {
+	display: inline-block;
+	width: 500px;
+	height: 470px;
+	margin-top:25px;
+	position: absolute;
+	left:370px;
+	top:115px;
+}
+.lista_bebidas tr, .lista_comidas tr{
+	height: 50px;
+}
+
+.lista_bebidas, .lista_comidas {
+	display: inline-table;
+	border-collapse: collapse;
+}
+
+/*---------decoraçao de tabela playlist--------------*/
+#playlist{
+	display: inline-block;
+	margin-left: 30px;
+	font-size: 17px;
+	float: left;
+	border-collapse: collapse;
+	height: 510px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+#playlist th{
+	border-bottom: 2px solid rgba(202, 47, 24, 0.9);;
+	padding: 10px;
+}
+#playlist td{
+	padding: 10px;
+	border-bottom: 2px solid rgba(153,0,76,0.7);
+}
+#playlist th img{
+	height: 20px;
+	width: 20px;
+}
+#playlist tr td:nth-child(6)  img, #playlist tr td:nth-child(1)  img,
+#playlist tr td:nth-child(7)  img {
+	height: 25px;
+	width: 25px;
+}
+#playlist thead tr{
+	background-color: rgba(255,255,255,0.7);
+	border-top: 2px solid rgba(202, 47, 24, 0.9);; 
+	border-left: 2px solid rgba(202, 47, 24, 0.9);; 
+	border-right: 2px solid rgba(202, 47, 24, 0.9);; 
+}
+#playlist thead th:nth-child(6){
+	width:40px;
+}
+#playlist tr:nth-child(odd) td{
+	background-color: rgba(255,255,255,0.3);
+}
+
+#playlist tr:nth-child(even) td{
+  	background-color: rgba(202, 47, 24, 0.5);
+}
+
+/*------------------------------------------*/
+#botoes_lado_playlist{
+	display: inline-block;
+}
+.playlist_botao_lado{
+	color: white;
+	font-size: 20px;
+	border-radius: 6px;
+	width: 150px;
+	height: 90px;
+	display: block;
+	margin-top: 70px;
+	background:linear-gradient(to bottom, rgba(202, 47, 24, 0.5) 5%, rgba(202, 47, 24, 0.7) 100%);
+	box-shadow: 1px 1px 3px black;
+}
+#menu_musica h1{
+	text-align: left;
+	font-size: 40px;
+	margin-left: 30px;
+}
+
+.star_music{
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+}
+
+.partilhar_sim, .partilhar_nao {
+	margin-top: 10px;
+    margin-right: 16px;
+    margin-left: 17px;
+    box-shadow: inset 0px 1px 0px 0px rgba(0,0,0,0.2);
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    border: 1px solid #dcdcdc;
+    display: inline-block;
+    background-color: gray;
+    color: rgba(255,255,255,1);
+    font-size: 25px;
+    font-weight: bold;
+    padding: 6px 24px;
+    text-decoration: none;
+}
+
+.partilhar_ok{
+	margin-top: 50px;
+    box-shadow: inset 0px 1px 0px 0px rgba(0,0,0,0.2);
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    border: 1px solid #dcdcdc;
+    display: inline-block;
+    background-color: gray;
+    color: rgba(255,255,255,1);
+    font-size: 25px;
+    font-weight: bold;
+    padding: 10px 24px;
+    text-decoration: none;
+    vertical-align: middle;
+}
+/*--------------------------------------------*/
+#tabs_top_musica div{
+	width: 195px;
+}
+/*---------decoraçao de tabela top musica--------------*/
+#menu_top_musica table{
+	display: inline-block;
+	margin-left: 30px;
+	font-size: 17px;
+	float: left;
+	border-collapse: collapse;
+	margin-top:20px;
+	height: 510px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+#menu_top_musica table th{
+	border-bottom: 2px solid rgba(202, 47, 24, 0.9);;
+	padding: 10px;
+}
+#menu_top_musica table td{
+	padding: 10px;
+	border-bottom: 2px solid rgba(153,0,76,0.7);
+}
+#menu_top_musica table th img{
+	height: 20px;
+	width: 20px;
+}
+#menu_top_musica table tr td:nth-child(6)  img{
+	height: 20px;
+	width: 20px;
+}
+#menu_top_musica table tr th:nth-child(1){
+	width: 40px;
+}
+#menu_top_musica table tr th:nth-child(2){
+	width: 200px;
+}
+#menu_top_musica table tr th:nth-child(3){
+	width: 185px;
+}
+#menu_top_musica table thead tr{
+	background-color: rgba(255,255,255,0.7);
+	border-top: 2px solid rgba(202, 47, 24, 0.9);; 
+	border-left: 2px solid rgba(202, 47, 24, 0.9);; 
+	border-right: 2px solid rgba(202, 47, 24, 0.9);; 
+}
+#menu_top_musica table tr:nth-child(odd) td{
+	background-color: rgba(255,255,255,0.3);
+}
+
+#menu_top_musica table tr:nth-child(even) td{
+  	background-color: rgba(202, 47, 24, 0.5);
+}
+
+#menu_top_musica table tbody {
+	line-height: 15px;
+}
+
+#menu_top_musica table tbody tr td:nth-child(1) img{
+	width:30px;
+	height:30px;
+}
+/*------------------------------------------*/
+.lista_bebidas th, .lista_bebidas td ,
+#pedidos_bebidas th, #pedidos_bebidas td{
+	border-bottom: 2px solid rgba(20,97,94,0.7);
+}
+.lista_bebidas tr:nth-child(even) td,
+#pedidos_bebidas tr:nth-child(even) td{
+  	background-color: rgba(21,195,195,0.3);
+} 
+.lista_bebidas thead tr , #pedidos_bebidas thead tr {
+	background-color: rgba(255,255,255,0.7);
+	border-top: 2px solid rgba(20,97,94,0.7); 
+	border-left: 2px solid rgba(20,97,94,0.7); 
+	border-right: 2px solid rgba(20,97,94,0.7); 
+}
+.lista_bebidas tr:nth-child(odd) td, .lista_comidas tr:nth-child(odd) td,
+#pedidos_bebidas tr:nth-child(odd) td  {
+}
+.lista_comidas th, .lista_comidas td,
+#pedidos_comidas th, #pedidos_comidas td  {
+	border-bottom: 2px solid rgba(153,0,76,0.7);
+}
+.lista_comidas tr:nth-child(even) td,
+#pedidos_comidas tr:nth-child(even) td{
+  	background-color: rgba(153,0,76 ,0.3);
+}
+.lista_comidas thead tr, #pedidos_comidas thead tr {
+	background-color: rgba(255,255,255,0.7);
+	border-top: 2px solid rgba(153,0,76,0.7); 
+	border-left: 2px solid rgba(153,0,76,0.7); 
+	border-right: 2px solid rgba(153,0,76,0.7); 
+}
+/*------------------------------------------*/
+.div_ordenar {
+	float:left;
+	display:inline-block;
+	position: relative;
+	width: 200px;
+	height: 20px;
+	margin-top: 10px;
+	margin-left: 10px;
+}
+
+#order_bebidas, #order_comidas {
+	position: absolute;
+	left: 0;
+	margin-left: 32.2px;
+	text-indent: 15px;
+	width:135px;
+	height:50px;
+    font-size: 15px;
+    color: rgba(0,0,0,0.7);
+}
+
+#tabela_alcoolicas, #tabela_aperitivos {
+	display:inline-block;
+}
+
+#tabela_naoalcoolicas, #tabela_refeicoes {
+	display:none;
+}
+
+/*-------------scrollbar--------------------*/
+table.lista_bebidas, table.lista_comidas {
+    width:475px;
+}
+
+.lista_bebidas thead th:nth-of-type(1), .lista_bebidas tbody td:nth-of-type(1) ,
+.lista_comidas thead th:nth-of-type(1), .lista_comidas tbody td:nth-of-type(1) {
+
+	width:180px; 
+}
+.lista_bebidas thead th:nth-of-type(2), .lista_bebidas tbody td:nth-of-type(2) ,
+.lista_comidas thead th:nth-of-type(2), .lista_comidas tbody td:nth-of-type(2) {
+	width:135px; 
+}
+.lista_bebidas thead th:nth-of-type(3), .lista_bebidas tbody td:nth-of-type(3) ,
+.lista_comidas thead th:nth-of-type(3), .lista_comidas tbody td:nth-of-type(3) {
+	width:135px; 
+	padding-right: 15px;
+}
+
+
+.lista_bebidas td, .lista_bebidas th, .lista_comidas td, .lista_comidas th,
+#tabela_top_bar td, #tabela_top_bar th, #tabela_top_semanal td, #tabela_top_semanal th, #tabela_top_mundial td, #tabela_top_mundial th{
+		padding-left: 25px;
+		text-align: left;
+}
+#playlist td, #playlist th{
+		padding-left: 5px;
+		text-align: left;
+}
+
+/* ******** */
+
+
+table.lista_bebidas tbody,table.lista_bebidas thead,
+table.lista_comidas tbody, table.lista_comidas thead,
+#pedidos_bebidas tbody, #pedidos_bebidas thead,
+#pedidos_comidas tbody, #pedidos_comidas thead{
+	display: block;
+}
+
+table.lista_bebidas tbody, table.lista_comidas tbody{
+    height: 415px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+	width: 15px;
+	height: 10px;
+}
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 4px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+/*------------------------------------------*/
+
+#pedidos_b, #pedidos_c {
+	right: 25px;
+	top: 138px;
+	font-size: 25px;
+	position: absolute;
+	display: inline-block;
+	width: 290px;
+	height: 450px;
+	border: 3px solid rgba(36,139,136 ,0.5);
+	border-bottom-right-radius: 6px;
+	border-bottom-left-radius: 6px;
+}
+
+#pedidos_bebidas, #pedidos_comidas {
+	display: inline-table;
+	font-size: 17px;
+	line-height: 50px;
+	border-spacing:0;
+}
+
+#pedidos_bebidas tbody, #pedidos_comidas tbody {
+	height: 345px;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+#pedidos_bebidas thead tr th , #pedidos_comidas thead tr th{
+	width:300px;
+	font-size: 24px;
+}
+
+#pedidos_bebidas tbody td:nth-of-type(3), #pedidos_comidas tbody td:nth-of-type(3) {
+	text-align:left;
+	width: 135px;
+}
+#pedidos_bebidas tbody td:nth-of-type(1), #pedidos_comidas tbody td:nth-of-type(1) {
+	width: 10px;
+	height: 10px;
+}
+#pedidos_bebidas tbody td:nth-of-type(2), #pedidos_comidas tbody td:nth-of-type(2) {
+	padding-right: 5px;
+}
+#pedidos_bebidas img, #pedidos_comidas img {
+	width: 35px;
+	height: 35px;
+	margin-right: 7px;
+	vertical-align: middle;
+}
+
+#concluir_pedido_b, #concluir_pedido_c {
+	position: absolute;
+	width: 100%;
+	height: 50px;
+	bottom: 0;
+	background-color: rgba(36,139,136 ,0.5);
+}
+
+.concluir_pedido_botao {
+    position: absolute;
+    left: 0px;
+    display: inline-block;
+    background-color: rgba(128,128,128,0.5);
+    height: 40px;
+    width: 100px;
+    font-size: 20px;
+    color: white;
+    padding-top: 10px;
+    border-radius:6px;
+    line-height: 30px;
+}
+
+.cancelar_pedido_botao {
+	position: absolute;
+    left: 100.5px;
+    display: inline-block;
+    background-color: rgba(128,128,128,0.3);
+    height: 40px;
+    width: 100px;
+    font-size: 20px;
+    color: white;
+    padding-top: 10px;
+    border-radius:6px;
+    line-height: 30px;
+}
+
+#total_bebidas, #total_comidas {
+	position: absolute;
+    right: 35px;
+    background-color: rgba(255,255,255,0.7);
+    display: inline-block;
+    width: 42.5px;
+    height: 40px;
+    padding-top: 10px;
+    padding-left: 10px;
+    border-radius: 6px 0px 0px 6px;
+}
+
+.total_euro {
+	position: absolute;
+	right: 0;
+	padding-top: 10px;
+	background-color: rgba(255,255,255,0.7);
+	height: 40px;
+	width: 30px;
+	padding-right: 5px;
+	border-radius: 0px 6px 6px 0px;
+}
+/*------------------------------------------*/
+
+.divpesquisa {
+	display:inline-block;
+	height:20px;
+	margin-top: 10px;
+	margin-right: 255px;
+}
+
+.searchbebida, .searchcomida {
+	width: 222px;
+	font-size: 19px;
+	height:50px;
+}
+
+#reset_bebida, #reset_comida {
+	background-color: transparent;
+	border: 0;
+	margin-left: -27px;
+	margin-top: 2px;
+}
+
+#reset_bebida img, #reset_comida img {
+	width: 12px;
+	height: 12px;
+}
+
+#reset_bebida:hover, #reset_comida:hover{
+	cursor: text;
+}
+
+
+
+
+.tabs_menu {
+	font-size:0;
+	height: 50px;
+	width: 700px;
+	margin-top: 20px;
+	margin-left: 28px;
+}
+
+.tabs_menu div {
+	font-size:20px;
+	display: inline-block;
+	padding: 15px;
+	padding-left: 20px;
+	width: 300px;
+	border-top-left-radius: 50%;
+	border-top-right-radius: 50%;
+}
+
+#alcoolicas {
+	font-size: 20px;
+}
+
+#nao-alcoolicas {
+	font-size: 20px;
+}
+
+#aperitivos {
+	font-size: 20px;
+	background-color: rgba(20,97,94,0.7);
+}	
+
+#refeicoes {
+	font-size: 20px;
+	background-color: rgba(20,97,94,0.4);
+}
+
+
+#metro{
+	display: inline-block;
+	width: 200px;
+	height: 200px;
+	padding-top: 20px;
+	border-top-left-radius: 50%;
+	border:4px solid black;
+	background-color: rgba(255,255,255,0.5);
+	position: absolute;
+	top: 100px;
+	left: 575px;
+}
+
+#metro img{
+	width: 110px;
+	height: 135px;
+	margin-top: 25px;
+	margin-left: 10px;
+}
+
+#autocarro{
+	display: inline-block;
+	width: 200px;
+	height: 200px;
+	padding-top: 20px;
+	margin: 0px 0px 0px 0px;
+	border-top-right-radius: 50%;
+	border:4px solid black;
+	background-color: rgba(255,255,255,0.5);
+	position: absolute;
+	top: 100px;
+	right: 205px;
+}
+#autocarro img{
+	width: 160px;
+	height: 160px;
+	margin-top: 15px;
+	margin-right: 5px;
+}
+
+#comboio{
+	display: inline-block;
+	width: 200px;
+	height: 200px;
+	padding-top: 20px;
+	border-bottom-left-radius: 50%;
+	border:4px solid black;
+	background-color: rgba(255,255,255,0.5);
+	position: absolute;
+	bottom: 140px;
+	left: 575px;
+}
+#comboio img{
+	width: 200px;
+	height: 150px;
+}
+
+#taxi{
+	display: inline-block;
+	width: 200px;
+	height: 200px;
+	padding-top: 20px;
+	border-bottom-right-radius: 50%;
+	border:4px solid black;
+	background-color: rgba(255,255,255,0.5);
+	position: absolute;
+	bottom: 140px;
+	right: 205px;
+}
+#taxi:hover, #metro:hover, #autocarro:hover, #comboio:hover { 
+    border:4px solid rgba(0,204,102,1);
+    
+}
+#taxi img{
+	width: 170px;
+	height: 170px;
+	margin-right: 5px;
+}
+
+#mapa_metro img{
+	 width: 450px;
+	 height: 350px;
+	 border: 3px solid black;
+}
+#mapa_metro_grande img,
+#mapa_autocarro_grande img, 
+#mapa_comboio_grande img{
+	background-color: rgba(225,225,225,0.7);
+	width:1500px;
+	height: 1250px;
+	top:0;
+	left: 0;
+}
+#mapa_metro_grande, 
+#mapa_autocarro_grande,
+#mapa_comboio_grande{
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+}
+
+.zoom_out {
+	width: 70px;
+	height: 70px;
+	position: absolute;
+	top: 25px;
+	right: 25px;
+}
+
+.zoom_out img {
+	max-width: 100%;
+	max-height: 100%;
+}
+#menu_metro_grande, #menu_autocarro_grande, 
+#menu_comboio_grande, #menu_taxi2, #menu_pedir_taxi{
+	background-color: rgba(255,255,255,0.7);
+	display: none;
+}
+
+.title_transports{
+	margin-left: 50px;
+	width: 350px;
+	color: black;
+	border: 4px solid black;
+	font-size: 50px;
+}
+.header_transports img{
+	display: inline-block;
+	width: 150px;
+	height: 150px;
+	margin-top: 15px;
+	float: left;
+	margin-left: -125px;
+}
+.header_transports{
+	display: inline-block;
+}
+.paragrafos{
+	font-size: 20px;
+	text-align: left;
+	margin-left: 100px;
+	margin-right: 100px;
+	margin-top: 15px;
+}
+.header_transports_metro img{
+	display: inline-block;
+	width: 120px;
+	height: 140px;
+	margin-top: 15px;
+	float: left;
+	margin-left: -125px;
+}
+.header_transports_metro{
+	display: inline-block;
+}
+.header_transports_comboio img{
+	display: inline-block;
+	width: 210px;
+	height: 150px;
+	margin-top: 15px;
+	float: left;
+	margin-left: -125px;
+}
+.header_transports_comboio{
+	display: inline-block;
+}
+
+/* Menu taxi */
+#menu_taxi2, #menu_pedir_taxi{
+	display:none;
+}
+#chamar_taxi{
+	font-size: 35px;
+	text-align: center;
+	margin-top:55px;
+	margin-left: 255px;
+	padding-top: 30px;
+	width: 300px;
+	height: 80px;
+	background-color: rgba(255,255,255,0.7);
+	border: 2px solid rgba(255,255,255,0.7);
+	box-shadow: 3px 3px 5px grey;
+	-moz-border-radius:15px;
+	-webkit-border-radius:15px;
+	border-radius:15px;
+}
+#chamar_taxi:hover, .taxi_botao:hover{
+	border: 2px solid gray;
+	background-color: rgba(255,255,255,1);
+}
+
+#confirm_taxi, #ok_taxi, #confirm_canc_taxi, #ok_canc_taxi, 
+#pagamento_concluido{
+	margin-top:60px;
+	margin-left: 230px;
+	width: 400px;
+	height: 200px;
+	display: none;
+	background: rgba(255,255,255,1);
+	border: 3px solid gray;
+	-moz-border-radius:15px;
+	-webkit-border-radius:15px;
+	border-radius:15px;
+}
+
+#concluir_pedido_bb, #ok_pagar_bebidas,
+#pagamento_imediato_b, #pagar_sidebar, 
+#ecra_pagar, #ok_pagar_tudo, #partilhar,
+#facebook, #tumblr, #twitter, #google,
+#partilhado, #iniciar_sessao{
+	margin-top:100px;
+	margin-left: 240px;
+	width: 450px;
+	height: 300px;
+	display: none;
+	background: rgba(255,255,255,1);
+	border: 3px solid gray;
+	-moz-border-radius:15px;
+	-webkit-border-radius:15px;
+	border-radius:15px;
+	text-align: center;
+}
+
+
+#ok_pagar_bebidas, #pagar_sidebar{
+    line-height: 40px;
+}
+#ok_pagar_bebidas h1, #pagar_sidebar h1{
+    line-height: 40px;
+    margin-top: 15px;
+}
+#pagar_sidebar p{
+	font-size:24px;
+}
+#partilhar h1,#facebook h1, 
+#tumblr h1, #twitter h1, #google h1,
+#partilhado h1{
+	line-height: 40px;
+    margin-top: 35px;
+}
+#iniciar_sessao h1{
+	line-height: 40px;
+    margin-top: 35px;
+    display: inline-block;
+}
+
+#partilhar p, #facebook p, #tumblr p, 
+#twitter p, #google p{
+	font-size: 24px;
+	margin-top: 15px;
+}
+#facebook img, #tumblr img, 
+#twitter img, #google img,
+#partilhado img, #logo_login{
+	display: inline-block;
+	width: 75px;
+	height: 75px;
+	float: left;
+	margin-top: 20px;
+	margin-left: 20px;
+
+}
+#partilhar img{
+	display: inline-block;
+	width: 25px;
+	height: 25px;
+	float: right;
+	margin: 10px;
+}
+
+#img_partilhar img{
+	width: 55px;
+	height: 55px;
+	margin-right: 39px;
+}
+
+#pagamento_imediato_b img, #ecra_pagar img, #home_partilhar{
+	width: 30px;
+	height: 30px;
+	display: inline-block;
+	float: right;
+	margin-right: 7px;
+	margin-top: 7px;
+}
+#pagar_ok{
+	margin: auto;
+  	margin-top: 30px;
+  	display:block;
+  	background-color: gray;
+}
+
+.taxi_botao {
+	margin-top: 30px;
+	margin-right: 25px;
+	box-shadow:inset 0px 1px 0px 0px rgba(0,0,0,0.2);
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	color:rgba(255,255,255,1);
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	margin-top: 15px;
+	margin-left: 15px;
+	line-height: 30px;
+    font-size: 27px;
+}
+
+#taxi_sim, #taxi_canc_nao, #empregado_sim, #progresso_bebida_sim,
+#progresso_comida_sim, #pagar_sim{
+	background-color:green;
+}
+#taxi_ok, #taxi_canc_ok, #empregado_ok_btn{
+	background-color:gray;
+}
+#ok_pagar_sidebar, #ok_pagar, #pagamento_ok{
+	margin-top: 35px;
+	background-color: gray;
+	width: 170px;
+	height: 90px;
+}
+#ok_pagar_bebidas h1,#ok_pagar_tudo h1{
+	margin-top: 30px;
+}
+#taxi_nao, #taxi_canc_sim, #empregado_nao,
+#progresso_bebida_nao, #progresso_comida_nao,
+#pagar_nao{
+	background-color: red;
+}
+#pagar_sim, #pagar_nao{
+	width: 150px;
+	height: 70px;
+}
+#pagamento_concluido{
+	background-color: rgba(255,255,255,1);
+	margin-top: -160px;
+	text-align: center;
+	position: absolute;
+	z-index: 10;
+	height: 240px;
+}
+#mensagem_obrigado{
+	border: 4px solid rgba(192,192,192,0.5);
+	background-color: rgba(255,255,255,0.4);
+	text-align: center;
+	font-size: 30px;
+	height: 150px;
+	width: 450px;
+	margin-top: 275px;
+	margin-left: 215px;
+	line-height: 25px;
+	
+}
+
+#janela_empregado, #empregado_ok{
+	z-index: 10;
+	display: none;
+	position: absolute;
+	bottom: 250px;
+	right: 250px;
+	background-color: rgba(255,255,255,1);
+	text-align: center;
+	border: 3px solid gray;
+	width: 400px;
+	height: 200px;
+	-moz-border-radius:15px;
+	-webkit-border-radius:15px;
+	border-radius:15px;
+}
+.barra_prograsso{
+
+	bottom: 0;
+	height: 280px;
+}
+.barra_prograsso img{
+	left: 375px;
+	bottom: 30px;
+	position: absolute;
+	height: 65px;
+	width: 600px;
+}
+.title_image{
+	margin-top: 20px;
+	display: inline-block; 
+	position: absolute;
+
+}
+.title_image img{
+	float:left;
+	display: inline-block; 
+	width: 80px;
+	height: 80px;
+	margin-left:0px;
+	top: 30px;
+	position: relative;
+	margin-left: -220px;
+}
+.title2{
+	font-size: 50px;
+	left: 0;
+	display: inline-block;
+	position: relative;
+	margin-left: -100px;
+}
+#text_below_title, #text_below_titleb{
+	  margin: 160px 50px 0 0;
+}
+
+#assegurar_transporte img{
+	width: 250px;
+	height: 105px;
+	vertical-align: center;
+	background-color: transparent;
+	background-repeat:no-repeat;
+	border: none;
+	cursor:pointer;
+	overflow: hidden;
+	outline:none;
+}
+
+#mapa_autocarro img{
+	 width: 400px;
+	 height: 300px;
+	 border: 3px solid black;
+}
+#mapa_autocarro{
+	display: inline-block;
+	float: left;
+	margin-left: 100px;
+}
+#tabela_autocarros{
+	table-layout: fixed;
+	width: 270px;
+	height: 275px;
+	float: right;
+	margin-right: 50px;
+	border: 3px solid rgba(73, 167, 145, 0.9); 
+	background-color: rgba(255,255,255,0.5);
+	line-height: 35px;
+	border-spacing:0px;
+}
+
+#tabela_autocarros thead tr{
+	background-color: rgba(73, 167, 145, 0.9); 
+	font-size:18px;
+	line-height: 47px;
+}
+
+/*Botão chamar taxi*/
+.btn{
+	margin-top: 30px;
+	margin-right: 25px;
+	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffffff), color-stop(1, #f6f6f6));
+	background:-moz-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+	background:-webkit-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+	background:-o-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+	background:-ms-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+	background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f6f6f6',GradientType=0);
+	background-color:#ffffff;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	color:#666666;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
+}
+.btn:hover, .pagar:hover{
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f6f6f6), color-stop(1, #ffffff));
+	background:-moz-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
+	background:-webkit-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
+	background:-o-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
+	background:-ms-linear-gradient(top, #f6f6f6 5%, #ffffff 100%);
+	background:linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f6f6f6', endColorstr='#ffffff',GradientType=0);
+	background-color:#f6f6f6;
+}
+.btn:active, .pagar:active{
+	position:relative;
+	top:1px;
+}
+
+.pagar_moedas{
+	background-image: url("icons/money.png");
+	margin-top: 50px;
+	background-color: rgba(255,255,255,0.7);
+	background-size: 100% 100%;
+	width: 150px;
+	height: 150px;
+	border-radius:6px;
+	margin-right: 20px;
+}
+.pagar_cartao{
+	background-image: url("icons/card.png");
+	margin-top: 50px;
+	background-color: rgba(255,255,255,0.7);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	width: 150px;
+	height: 150px;
+	border-radius:6px;
+	margin-right: 20px;
+}
+.pagar_moedas_sidebar{
+	background-image: url("icons/money.png");
+	margin-top: 15px;
+	background-color: rgba(255,255,255,0.7);
+	background-size: 100% 100%;
+	width: 150px;
+	height: 150px;
+	border-radius:6px;
+	margin-right: 20px;
+}
+.pagar_cartao_sidebar{
+	background-image: url("icons/card.png");
+	margin-top: 15px;
+	background-color: rgba(255,255,255,0.7);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	width: 150px;
+	height: 150px;
+	border-radius:6px;
+	margin-right: 20px;
+}
+
+.assegurar_transporte{
+	margin-top: 50px;
+	background-image: url("icons/transport.png");
+	background-color: rgba(255,255,255,0.7);
+	background-size: 100% 100%;
+	width: 200px;
+	height: 75px;
+	border-radius:6px;
+	margin-right: 20px;
+}
+.assegurar_transporte:hover,.assegurar_transporte1:hover,
+.pagar_cartao:hover, .pagar_moedas:hover, .pagar_moedas_sidebar:hover, 
+.pagar_cartao_sidebar:hover{
+	box-shadow:inset 1px 1px 1px 1px gray;
+}
+.assegurar_transporte1{
+	background-image: url("icons/ignorar.png");
+	margin-top: 50px;
+	background-color: rgba(255,255,255,0.7);
+	background-size: 100% 100%;
+	padding-left: 15px;
+	background-repeat: no-repeat;
+	width: 200px;
+	height: 75px;
+	border-radius:6px;
+	margin-right: 20px;
+}
+
+#timer_taxi{
+	display: none;
+	position: absolute;
+	bottom: 25px;
+	right: 200px;
+}
+
+#cancel_taxi{
+	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	/*background */
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffffff), color-stop(1, #f6f6f6));
+	background:-moz-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+	background:-webkit-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+	background:-o-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+	background:-ms-linear-gradient(top, #ffffff 5%, #f6f6f6 100%);
+	background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f6f6f6',GradientType=0);
+	background-color:#ffffff;
+	/* border */
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:2px solid #dcdcdc;
+	/* tamanho e alinhamento */
+	padding:6px 24px;
+	display: none;
+	position: absolute;
+	bottom: 15px;
+	right: 420px;
+	width: 160px;
+	height: 30px;
+	color:#666666;
+	font-family:Arial;
+	font-size:20px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
+	text-align:center;
+}
+/*input | botão morada*/
+.form-control{
+    padding: 20px;
+    border-radius:20px;
+    width: 525px;
+    color: black;
+    font-size: 20px;
+
+}
+.form-control1{
+    padding: 20px;
+    border-radius:20px;
+    height: 10px;
+    width: 230px;
+    color: black;
+    margin-top: 10px;
+    display: inline-block;
+    margin-right: 10px;
+}
+#input_pass{
+	margin-left: 27px;
+}
+#iniciar_sessao h2{
+  margin-right: 10px;
+  font-size: 15px;
+  display: inline-block;
+  
+}
+#submit_login:disabled{
+	background-color: rgba(128,128,128,0.3);
+	border: 1px solid gray;
+	width: 160px;
+}
+
+#submit_login:enabled {
+	box-shadow: inset 0px 0px 5px 1px black;
+	width: 160px;
+	background-color: rgba(128,128,128,0.7);
+}
+.btn{
+    height: 42px;
+    width: 115px;
+    border: none;
+}
+
+#go_pagar{
+	top:0;
+	left: 0;
+}
+
+#submit_morada:disabled {
+	opacity: 0; 
+}
+
+#submit_morada:enabled {
+	box-shadow: inset 0px 0px 4px 1px black;
+	height: 50px;
+    font-size: 20px;
+    width: 140px;
+}
+
+#teclado {
+	z-index: 10;
+	display: none;
+	position: absolute;
+	bottom: 25px;
+	right: 200px;
+	background-color: black;
+}
+#teclado img {
+	width: 630px;
+	height: 230px;
+}
+
+#confirm_canc_taxi, #ok_canc_taxi, #concluir_pedido_bb,
+#ok_pagar_bebidas, #pagamento_imediato_b,
+#pagar_sidebar, #ecra_pagar, #ok_pagar_tudo,
+#partilhar,#facebook, #tumblr, #twitter, #google,
+#partilhado, #iniciar_sessao {
+	z-index: 10;
+	position: absolute;
+	bottom: 260px;
+	right: 215px;
+	text-align: center;
+	margin:0;
+}
+
+
+#personalizar_bebida, #personalizar_comida {
+	z-index: 10;
+	display: none;
+	position: absolute;
+	top: 135px;
+	right: 340px;
+	background-color: rgba(255,255,255,1);
+	text-align: center;
+	border: 3px solid gray;
+	width: 475px;
+	height: 455px;
+	-moz-border-radius:15px;
+	-webkit-border-radius:15px;
+	border-radius:15px;	
+}
+
+#personalizar_bebida p, #personalizar_comida p {
+	font-size: 28px;
+	font-weight: bold;
+	margin-bottom: 15px;
+}
+
+#time_real{
+	margin: 20px 0px 20px 40px;	
+	width: 260px;
+	height: 35px;
+	color: white;
+	font-size: 50px;
+	text-align: center;
+	font-weight: bold;
+	text-shadow: 0 0 10px black;
+}
+#personalizar_bebida label, #personalizar_comida label {
+	font-size: 25px;
+	display:block;
+	text-align: left;
+	vertical-align: middle;
+	line-height: 50px;
+	width: 400px;
+	margin-left: 60px;
+	margin-top: 15px;
+}
+#personalizar_bebida label input, #personalizar_comida label input {
+  	display: none;/* <-- hide the default checkbox */
+}
+#personalizar_bebida label span, #personalizar_comida label span {/* <-- style the artificial checkbox */
+  height: 20px;
+  width: 20px;
+  border: 1px solid grey;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+[type=checkbox]:checked + span:before {/* <-- style its checked state..with a ticked icon */
+  content: '\2714';
+  position: absolute;
+  font-size:25px;
+  top: -14px;
+  left: 0px;
+}
+
+#personalizar_c_conf, #personalizar_b_conf {
+	display:inline-block;
+	padding: 18px;
+	background-color: green;
+	color: white;
+    text-shadow: 0 0 2px black;
+	font-size: 25px;
+	margin-top: 25px;
+    border-radius: 6px;
+}
+
+#personalizar_c_canc, #personalizar_b_canc {
+	display:inline-block;
+	padding:18px;
+	background-color: red;
+	font-size: 25px;
+    margin-left: 50px;
+    color: white;
+    text-shadow: 0 0 2px black;
+    border-radius: 6px;
+}
+
+
+#progresso_comida, #progresso_bebida {
+	z-index: 10;
+	display: none;
+	position: absolute;
+	bottom: 250px;
+	right: 250px;
+	background-color: rgba(255,255,255,1);
+	text-align: center;
+	border: 3px solid gray;
+	width: 500px;
+	height: 300px;
+	-moz-border-radius:15px;
+	-webkit-border-radius:15px;
+	border-radius:15px;
+}
+
+#progresso_bebida h1, #progresso_comida h1 {
+	font-size:25px;
+}
+#progresso_bebida p, #progresso_comida p {
+	text-align: left;
+	margin-left: 20px;
+	    margin-right: 10px;
+	font-size:20px;
+}
+
+#concluir_pedido_descricao, #descricao_sidebar {
+	z-index: 10;
+	display: none;
+	position: absolute;
+	top: 135px;
+	right: 340px;
+	background-color: rgba(255,255,255,1);
+	text-align: center;
+	border: 3px solid gray;
+	width: 475px;
+	height: 455px;
+	-moz-border-radius:15px;
+	-webkit-border-radius:15px;
+	border-radius:15px;	
+}
+
+#concluir_pedido_descricao h1, #descricao_sidebar h1 {
+	font-size: 25px;
+	margin-bottom: 15px;
+}
+
+#pedido_descricao, #pedidos_sidebar {
+	background-color: rgba(255,255,255,0.7);
+	width: 100%;
+	height: 275px;
+	display: block;
+	margin: 0 auto;
+	overflow-y: auto;
+    overflow-x: hidden;
+    
+}
+#pedido_descricao p , #pedidos_sidebar p{
+	text-align: left;
+	line-height: 30px;
+	font-size: 20px;
+	margin-left: 40px;
+	margin-top: 0;
+}
+
+#continuar_descricao, #continuar_descricao_sidebar {
+	margin: auto;
+    margin-top: 30px;
+    display: inline-block;
+    background-color: green;
+}
+
+#cancelar_descricao, #cancelar_descricao_sidebar {
+    margin-top: 30px;
+    display: inline-block; 
+    margin-left:30px;
+    background-color: red;
+}
+#div_comboio{
+	display: inline-block;
+	position: relative;
+}
+#navigation_comboio{
+	display: inline-block;
+	position: absolute;
+	margin-left: -350px;
+	margin-top: 7px;
+}
+#mapa_comboio{
+	display: inline-block;
+	position: absolute;
+	margin-left: -125px;
+	margin-top: -15px;
+}
+#mapa_comboio img{
+	 width: 450px;
+	 height: 270px;
+	 border: 3px solid black;
+	 margin-top: 15px;
+}
+/*Navigatiion bar - comboios*/
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
+    border: 1px solid #555;
+}
+li {
+    text-align: center;
+    border-bottom: 1px solid #555;
+    height: 50px;
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+li a {
+    display: block;
+    font-size: 19px;
+    padding: 14px 12px 8px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color on hover */
+li:hover {
+    background-color: #555;
+    color: white;
+}
+
+
+.ecra_ajuda {
+	margin-top: 150px;
+	margin-left: 450px;
+	width: 500px;
+	height: 380px;
+	display: none;
+	background: rgba(255,255,255,1);
+	border: 3px solid gray;
+	-moz-border-radius:15px;
+	-webkit-border-radius:15px;
+	border-radius:15px;
+	text-align: center;
+	font-size: 17px;
+}
+.ecra_ajuda p {
+	margin-left: 12px;
+	margin-right: 12px;
+}
+.ecra_ajuda h1{
+	margin-top: 33px;
+	margin-bottom: 20px;
+}
+.ecra_ajuda img:nth-of-type(1) {
+	height: 40px;
+	width: 40px;
+	position: absolute;
+	right: 264px;
+	top: 165px;
+}
+
+#disable_sidebar {
+	width: 340px;
+	position: absolute;
+	height: 700px;
+	top: 50%;
+	left: 170px;
+	position: fixed;
+	transform: translate(-50%, -50%);
+	background-color: rgba(255,255,255,0.5);
+	display: none;
+}
+#chamar_taxi_cancelar, #chamar_taxi_sim{
+	height: 50px;
+	width: 149px;
+}

@@ -1,0 +1,1334 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="theme.blue.css" type="text/css" />
+	<title>BarISTa</title>
+</head>
+
+<body>
+	<div id="main">
+		<div id="home">
+			<div id="ecra_inicial">
+				<h1>Bem vindo ao BarISTa</h1>
+			</div>
+			<div id="sidebar">
+				<div id="time_real"></div>
+				<div id="total">
+					<div id="a_pagar">Total: 0 €</div>
+					<div id="pagar_total" onclick="pagar('descricao')">
+						<b>Pagar</b>
+					</div>
+				</div>
+				<div class="sidebar_col_1">
+					<div class="funcionalidade" id="bebida" onclick="menuChange('menu_bebidas');clear_previous(1)">
+						<img src="icons/drink3.png" alt="">
+					</div>
+					<div class="funcionalidade" id="musica" onclick="menuChange('menu_musica')">
+						<img src="icons/music1.png" alt="">
+					</div>
+					<div class="funcionalidade" id="ajuda" onclick="ajuda('abrir')">
+						<img src="icons/help3.png" alt="">
+					</div>
+				</div>
+				<div class="sidebar_col_2">
+					<div class="funcionalidade" id="comida" onclick="menuChange('menu_comida');clear_previous(1)">
+						<img src="icons/food1.png" alt="">
+					</div>
+					<div class="funcionalidade" id="transportes" onclick="menuChange('menu_transportes');clear_previous(1)">
+						<img src="icons/transport1.png" alt="">
+					</div>
+					<div class="funcionalidade" id="sair">
+						<img src="icons/exit1.png" alt="" onclick="menuChange('menu_sair_1');clear_previous(1)">
+					</div>
+				</div>
+				<div class="sidebar_row">
+					<div id="nivel_alcool">
+						<img src="icons/barra0.png" id="barra_alcool" alt="">
+					</div>
+				</div>
+			</div>
+
+			<div class="content" id="inicial" style="display:none">
+				<marquee id="musica_aTocar"><img src="icons/play.png"></marquee>
+			</div>
+			<div class="content" id="menu_bebidas">
+				<div class="home_screen" onclick="menuChange('inicial')"><img src="icons/home.png"></div>
+				<div class="tabs_menu">
+					<div id="alcoolicas" onclick="tabChange('tabela_alcoolicas','alcoolicas','nao-alcoolicas')">Bebidas Alcoólicas</div>
+					<div id="nao-alcoolicas" onclick="tabChange('tabela_naoalcoolicas','nao-alcoolicas','alcoolicas')">Bebidas Não Alcoólicas</div>
+				</div>
+				<div class="div_ordenar">
+					<select id="order_bebidas">
+						<option value="+popular">Mais popular</option>
+						<option value="barato">Mais barato</option>
+						<option value="caro">Mais caro</option>
+						<option value="a-z">A - Z</option>
+						<option value="z-a">Z - A</option>
+						<option value="-popular">Menos popular</option>
+					</select>
+				</div>
+				<div class="divpesquisa">
+					<input class="searchbebida" type="search" onfocus="show_teclado()" onblur="hide_teclado()" data-column="all" placeholder="pesquisar..." />
+					<button id="reset_bebida" disabled><img src="icons/search.png"></img>
+					</button>
+				</div>
+
+				<div class="divbebidas" id="tabela_alcoolicas">
+					<table class="tablesorter lista_bebidas ">
+						<thead>
+							<tr>
+								<th class="sorter-false">Bebida</th>
+								<th class="sorter-false">Preço (&#8364)</th>
+								<th class="sorter-false">Popularidade</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Cerveja</td>
+								<td>1</td>
+								<td>100</td>
+							</tr>
+							<tr>
+								<td>Vodka</td>
+								<td>3</td>
+								<td>80</td>
+							</tr>
+							<tr>
+								<td>Absinto</td>
+								<td>4</td>
+								<td>50</td>
+							</tr>
+							<tr>
+								<td>Gim</td>
+								<td>5</td>
+								<td>65</td>
+							</tr>
+							<tr>
+								<td>Ginja</td>
+								<td>6</td>
+								<td>35</td>
+							</tr>
+							<tr>
+								<td>Whiskey</td>
+								<td>9</td>
+								<td>95</td>
+							</tr>
+							<tr>
+								<td>Vinho</td>
+								<td>15</td>
+								<td>99</td>
+							</tr>
+							<tr>
+								<td>Somersby</td>
+								<td>2</td>
+								<td>90</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+				<div class="divbebidas" id="tabela_naoalcoolicas">
+					<table class="tablesorter lista_bebidas">
+						<thead>
+							<tr>
+								<th class="sorter-false">Bebida</th>
+								<th class="sorter-false">Preço (&#8364)</th>
+								<th class="sorter-false">Popularidade</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Água</td>
+								<td>1</td>
+								<td>60</td>
+							</tr>
+							<tr>
+								<td>Coca-Cola</td>
+								<td>2</td>
+								<td>75</td>
+							</tr>
+							<tr>
+								<td>Sprite</td>
+								<td>2</td>
+								<td>100</td>
+							</tr>
+							<tr>
+								<td>Chá</td>
+								<td>5</td>
+								<td>50</td>
+							</tr>
+							<tr>
+								<td>Café</td>
+								<td>4</td>
+								<td>80</td>
+							</tr>
+							<tr>
+								<td>Ice-tea</td>
+								<td>3</td>
+								<td>65</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+				<div id="pedidos_b">
+					<table id="pedidos_bebidas">
+						<thead>
+							<tr>
+								<th colspan="5">Pedidos</th>
+							</tr>
+						</thead>
+
+						<tbody>
+						</tbody>
+					</table>
+					<div id="concluir_pedido_b">
+						<div class="concluir_pedido_botao" id="concluir_pedido_id" onclick="concluirPedidoBebidas('abrir')">Confirmar</div>
+						<div class="cancelar_pedido_botao" id="cancelar_pedido_id" onclick="cancelarPedidoBebidas()">Cancelar</div>
+						<div id="total_bebidas">0</div>
+						<div class="total_euro">€</div>
+					</div>
+				</div>
+				<div id="disable_buttons_customBebida">
+					<div id="personalizar_bebida">
+						<p id="personalizar_bebida_p">Personalizar Bebida</p>
+						<label>
+							<input type='checkbox' value="gelo">
+							<span></span>
+							Gelo
+						</label>
+						<label>
+							<input type='checkbox' value="sal">
+							<span></span>
+							Sal
+						</label>
+						<label>
+							<input type='checkbox' value="limao">
+							<span></span>
+							Limão
+						</label>
+						<label>
+							<input type='checkbox' value="palhinha">
+							<span></span>
+							Palhinha
+						</label>
+						<div id="personalizar_b_conf" onclick="popupPersonalizarBebida('confirmar')">Confirmar</div>
+						<div id="personalizar_b_canc" onclick="popupPersonalizarBebida('cancelar')">Cancelar</div>
+					</div>
+				</div>
+				<div id="disable_buttons_progressoBebida">
+					<div id="progresso_bebida">
+						<h1>Pedido de bebidas não terminado</h1>
+						<p>Se sair do menu de bebidas sem concluir o seu pedido, o pedido será eliminado</p>
+						<p>Pretende sair do menu de bebidas e eliminar este pedido?</p>
+						<button class="taxi_botao" id="progresso_bebida_sim" onclick="popupProgressoBebidas('sim')">Sim</button>
+						<button class="taxi_botao" id="progresso_bebida_nao" onclick="popupProgressoBebidas('nao')">Não</button>
+					</div>
+				</div>
+			</div>
+			<div class="content" id="menu_comida">
+				<div class="home_screen" onclick="menuChange('inicial')"><img src="icons/home.png"></div>
+				<div class="tabs_menu">
+					<div id="aperitivos" onclick="tabChange('tabela_aperitivos', 'aperitivos', 'refeicoes')">Aperitivos</div>
+					<div id="refeicoes" onclick="tabChange('tabela_refeicoes','refeicoes','aperitivos')">Refeições</div>
+				</div>
+				<div class="div_ordenar">
+					<select id="order_comidas">
+						<option value="+popular">Mais popular</option>
+						<option value="barato">Mais barato</option>
+						<option value="caro">Mais caro</option>
+						<option value="a-z">A - Z</option>
+						<option value="z-a">Z - A</option>
+						<option value="-popular">Menos popular</option>
+					</select>
+				</div>
+				<div class="divpesquisa">
+					<input class="searchcomida" type="search" onfocus="show_teclado()" onblur="hide_teclado()" data-column="all" placeholder="pesquisar..." />
+					<button id="reset_comida" disabled><img src="icons/search.png"></img>
+					</button>
+				</div>
+
+				<div class="divcomidas" id="tabela_aperitivos">
+					<table class="tablesorter lista_comidas ">
+						<thead>
+							<tr>
+								<th class="sorter-false">Comida</th>
+								<th class="sorter-false">Preço (&#8364)</th>
+								<th class="sorter-false">Popularidade</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Tremoços</td>
+								<td>1</td>
+								<td>90</td>
+							</tr>
+							<tr>
+								<td>Pipocas</td>
+								<td>3</td>
+								<td>80</td>
+							</tr>
+							<tr>
+								<td>Batata Frita</td>
+								<td>2</td>
+								<td>100</td>
+							</tr>
+							<tr>
+								<td>Amendoins</td>
+								<td>4</td>
+								<td>50</td>
+							</tr>
+							<tr>
+								<td>Amêndoas</td>
+								<td>2</td>
+								<td>10</td>
+							</tr>
+							<tr>
+								<td>Salame</td>
+								<td>3</td>
+								<td>80</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+				<div class="divcomidas" id="tabela_refeicoes">
+					<table class="tablesorter lista_comidas">
+						<thead>
+							<tr>
+								<th class="sorter-false">Comida</th>
+								<th class="sorter-false">Preço (&#8364)</th>
+								<th class="sorter-false">Popularidade</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Hamburguer</td>
+								<td>1</td>
+								<td>90</td>
+							</tr>
+							<tr>
+								<td>Cachorro</td>
+								<td>3</td>
+								<td>80</td>
+							</tr>
+							<tr>
+								<td>Pizza</td>
+								<td>2</td>
+								<td>100</td>
+							</tr>
+							<tr>
+								<td>Baguete</td>
+								<td>5</td>
+								<td>50</td>
+							</tr>
+							<tr>
+								<td>Bitoque</td>
+								<td>9</td>
+								<td>100</td>
+							</tr>
+							<tr>
+								<td>Lasanha</td>
+								<td>8</td>
+								<td>100</td>
+							</tr>
+							<tr>
+								<td>Feijoada</td>
+								<td>14</td>
+								<td>100</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+				<div id="pedidos_c">
+					<table id="pedidos_comidas">
+						<thead>
+							<tr>
+								<th colspan="5">Pedidos</th>
+							</tr>
+						</thead>
+						<tbody>
+
+						</tbody>
+					</table>
+					<div id="concluir_pedido_c">
+						<div class="concluir_pedido_botao" id="concluir_pedido_id_c" onclick="concluirPedidoBebidas('abrir')">Confirmar</div>
+						<div class="cancelar_pedido_botao" id="cancelar_pedido_id_c" onclick="cancelarPedidoComidas()">Cancelar</div>
+						<div id="total_comidas">0</div>
+						<div class="total_euro">€</div>
+					</div>
+				</div>
+				<div id="disable_buttons_customComida">
+					<div id="personalizar_comida">
+						<p>Personalizar Comida</p>
+						<label>
+							<input type='checkbox' value="sal">
+							<span></span>
+							Sal
+						</label>
+						<label>
+							<input type='checkbox' value="ketchup">
+							<span></span>
+							Ketchup
+						</label>
+						<label>
+							<input type='checkbox' value="maionese">
+							<span></span>
+							Maionese
+						</label>
+						<label>
+							<input type='checkbox' value="mostarda">
+							<span></span>
+							Mostarda
+						</label>
+						<div id="personalizar_c_conf" onclick="popupPersonalizarComida('confirmar')">Confirmar</div>
+						<div id="personalizar_c_canc" onclick="popupPersonalizarComida('cancelar')">Cancelar</div>
+					</div>
+				</div>
+				<div id="disable_buttons_progressoComida">
+					<div id="progresso_comida">
+						<h1>Pedido de comida não terminado</h1>
+						<p>Se sair do menu de comida sem concluir o seu pedido,   o pedido será eliminado</p>
+						<p>Pretende sair do menu de comida e eliminar este pedido?</p>
+						<button class="taxi_botao" id="progresso_comida_sim" onclick="popupProgressoComidas('sim')">Sim</button>
+						<button class="taxi_botao" id="progresso_comida_nao" onclick="popupProgressoComidas('nao')">Não</button>
+					</div>
+				</div>
+			</div>
+			<div class="content" id="menu_transportes">
+				<div class="empregado"><img src="icons/waiter.png"></div>
+				<div class="voltar" onclick="menuChangePrevious()"><img src="icons/goback.png"></div>
+				<div class="home_screen" onclick="menuChange('inicial')"><img src="icons/home.png"></div>
+				<div id="metro" onclick="menuChange('menu_metro')">
+					<img src="icons/metro.png" alt="">
+				</div>
+				<div id="autocarro" onclick="menuChange('menu_autocarro')">
+					<img src="icons/autocarro.png" alt="">
+				</div>
+				<div id="comboio" onclick="menuChange('menu_comboio')">
+					<img src="icons/comboio.png" alt="">
+				</div>
+				<div id="taxi" onclick="menuChange('menu_taxi1')">
+					<img src="icons/taxi.png" alt="">
+				</div>
+				
+
+			</div>
+			<div class="content" id="menu_metro">
+				<div class="empregado"><img src="icons/waiter.png"></div>
+				<div class="voltar" onclick="menuChangePrevious()"><img src="icons/goback.png"></div>
+				<div class="home_screen" onclick="menuChange('inicial')"><img src="icons/home.png"></div>
+				<div>
+					<div class="header_transports_metro">
+						<img src="icons/metro.png">
+						<p class="title_transports">Metro</p>
+					</div>
+					<p class="paragrafos">Preço por viagem: 1,5&#8364</p>
+					<p class="paragrafos">Tempo médio de espera: 8 minutos</p>
+
+				</div>
+				<div id="mapa_metro">
+					<img src="icons/metro_lisboa.png" alt="" onclick="menuChange('menu_metro_grande')">
+				</div>
+			</div>
+			<div class="content" id="menu_metro_grande">
+				<div id="mapa_metro_grande"><img src="icons/metro_lisboa_aqui.jpg" alt=""></div>
+				<div class="zoom_out" onclick="menuChangePrevious()"><img src="icons/zoom_out.png"></div>
+
+			</div>
+
+			<div class="content" id="menu_autocarro">
+				<div class="empregado"><img src="icons/waiter.png"></div>
+				<div class="voltar" onclick="menuChangePrevious()"><img src="icons/goback.png"></div>
+				<div class="home_screen" onclick="menuChange('inicial')"><img src="icons/home.png"></div>
+				<div>
+					<div class="header_transports">
+						<img src="icons/autocarro.png">
+						<p class="title_transports">Autocarro</p>
+					</div>
+					<p class="paragrafos">Preço por viagem: 1&#8364</p>
+					<p class="paragrafos">Tempo máximo de espera: 35 minutos</p>
+				</div>
+				<div id="autocarro_conteudo">
+					<div id="mapa_autocarro">
+						<img src="icons/autocarro_lisboa.png" alt="" onclick="menuChange('menu_autocarro_grande')">
+					</div>
+					<table id="tabela_autocarros">
+						<thead>
+							<tr>
+								<th colspan="2">Próximos autocarros</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>727</td>
+								<td>3 min</td>
+							</tr>
+							<tr>
+								<td>21</td>
+								<td>5 min</td>
+							</tr>
+							<tr>
+								<td>16</td>
+								<td>11 min</td>
+							</tr>
+							<tr>
+								<td>732</td>
+								<td>15 min</td>
+							</tr>
+							<tr>
+								<td>738</td>
+								<td>22 min</td>
+							</tr>
+							<tr>
+								<td>38</td>
+								<td>27 min</td>
+							</tr>
+							<tr>
+								<td>738</td>
+								<td>33 min</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="content" id="menu_autocarro_grande">
+				<div id="mapa_autocarro_grande"><img src="icons/autocarro_lisboa1_aqui.jpg" alt=""></div>
+				<div class="zoom_out" onclick="menuChangePrevious()"><img src="icons/zoom_out.png"></div>
+
+			</div>
+			<div class="content" id="menu_comboio">
+				<div class="empregado"><img src="icons/waiter.png"></div>
+				<div class="voltar" onclick="menuChangePrevious()"><img src="icons/goback.png"></div>
+				<div class="home_screen" onclick="menuChange('inicial')"><img src="icons/home.png"></div>
+				<div>
+					<div class="header_transports_comboio">
+						<img src="icons/comboio.png">
+						<p class="title_transports">Comboio</p>
+					</div>
+					<p class="paragrafos">Preço por viagem: 1,5&#8364</p>
+					<p class="paragrafos">Horário de funcionamento: 06h00 - 24h00</p>
+					<p class="paragrafos" id="comboio_proximo">Tempo máximo de espera: 30 minutos</p>
+				</div>
+				<div id="div_comboio">
+					<div id="navigation_comboio">
+						<ul>
+							<li onclick="mapaComboio('lisboa')" id="comboio_1"><a><b>Comboios Lisboa</b></a></li>
+							<li onclick="mapaComboio('sintra')" id="comboio_2"><a>Linha de Sintra</a></li>
+							<li onclick="mapaComboio('azambuja')" id="comboio_3"><a>Linha de Azambuja</a></li>
+							<li onclick="mapaComboio('cascais')" id="comboio_4"><a>Linha de Cascais</a></li>
+							<li onclick="mapaComboio('sado')" id="comboio_5"><a>Linha do Sado</a></li>
+						</ul>
+					</div>
+					<div id="mapa_comboio">
+						<img src="icons/comboio_lisboa.png" id="comboio_mapa" alt="" onclick="menuChange('menu_comboio_grande')">
+					</div>
+				</div>
+			</div>
+			<div class="content" id="menu_comboio_grande">
+				<div id="mapa_comboio_grande"><img src="icons/comboio_lisboa_aqui.png" id="comboio_mapa1" alt=""></div>
+				<div class="zoom_out" onclick="menuChangePrevious()"><img src="icons/zoom_out.png"></div>
+			</div>
+
+
+			<div class="content" id="menu_taxi1">
+				<div class="home_screen" onclick="menuChange('inicial')"><img src="icons/home.png"></div>
+				<div class="voltar" onclick="menuChangePrevious()"><img src="icons/goback.png"></div>
+				<div class="header_transports">
+					<img src="icons/taxi.png">
+					<p class="title_transports">Táxi</p>
+				</div>
+				<p class="paragrafos">Introduza o seu destino. Para que os valores aproximados do tempo de viagem e o respetivo preço sejam calculados.</p>
+				<!--barra input morada-->
+				<div class="pedir_morada" style="margin-top: 50px">
+					<input id="input_morada" name="search" value="" onfocus="show_teclado()" onblur="hide_teclado()" onkeyup="check_morada()" class="form-control" placeholder="morada" type="text">
+					<span class="input-group-btn" style="width: 16px">
+						<button id="submit_morada" class="btn btn-default" type="submit" onclick="clear_morada(); menuChange('menu_taxi2')" disabled>Submeter</button>
+					</span>
+				</div>
+			</div>
+			<div class="content" id="menu_taxi1b" style="display: none; background-color: rgba(255,255,255,0.7);">
+				<div class="home_screen" onclick="menuChange('inicial')"><img src="icons/home.png"></div>
+				<div class="voltar" onclick="menuChangePrevious()"><img src="icons/goback.png"></div>
+				<div class="header_transports">
+					<img src="icons/taxi.png">
+					<p class="title_transports">Táxi</p>
+				</div>
+				<p class="paragrafos">Já chamou um táxi, deseja chamar um novo táxi ou cancelar o táxi já chamado?</p>
+				<button id="chamar_taxi_sim" class="btn btn-default"
+				onclick="setFlagTaxi(); menuChange('menu_taxi1');setFlagTaxi()">Chamar um novo táxi</button>
+				<button id="chamar_taxi_cancelar" class="btn btn-default" onclick="setFlagCancTaxi(); popupCancTaxi('abrir')">Cancelar Táxi</button>
+			</div>
+			<div class="content" id="menu_taxi2">
+				<div class="empregado"><img src="icons/waiter.png">
+				</div>
+				<div class="voltar" onclick="menuChangePrevious()"><img src="icons/goback.png">
+				</div>
+				<div class="header_transports">
+					<img src="icons/taxi.png">
+					<p class="title_transports">Táxi</p>
+				</div>
+				<p class="paragrafos">Tempo de viagem: 30 minutos</p>
+				<p class="paragrafos">Estimativa de preço: 20€</p>
+				<div id="chamar_taxi" onclick="popupTaxi('abrir')">Chamar táxi</div>
+				<div id="confirm_taxi">
+					<h1>Chamar taxi</h1>
+					<p>Quer mesmo chamar um táxi?</p>
+					<button class="taxi_botao" id="taxi_sim" onclick="popupTaxi('chamar')" onclick="clock()">Sim</button>
+					<button class="taxi_botao" id="taxi_nao" onclick="menuChange('menu_taxi1')">Não</button>
+				</div>
+				<div id="ok_taxi">
+					<h1>Chamar táxi</h1>
+					<p>Táxi chamado</p>
+					<button class="taxi_botao" id="taxi_ok" onclick="menuChange('menu_transportes'); popupTaxi('fechar'); clear_previous(1)">OK</button>
+				</div>
+			</div>
+			<div class="content" id="menu_sair_1">
+				<div class="empregado"><img src="icons/waiter.png"></div>
+				<div class="voltar" onclick="menuChangePrevious()"><img src="icons/goback.png">
+				</div>
+				<div class="title_image">
+					<img src="icons/danger.png">
+					<p class="title2">Transportes</p>
+
+				</div>
+				<div id="text_below_title">
+					<p class="paragrafos">O seu nivel de alcool está acima do nivel recomendado para uma condução segura.</p>
+					<p class="paragrafos">Gostaria de assegurar transporte?</p>
+				</div>
+				<button class="assegurar_transporte" onclick="menuChange('menu_transportes')">
+				</button>
+				<button class="assegurar_transporte1" onclick="menuChange('menu_sair_2')">
+				</button>
+				<div class="barra_prograsso">
+					<img src="icons/progresso1.png">
+				</div>
+			</div>
+
+			<div class="content" id="menu_sair_1b">
+				<div class="empregado"><img src="icons/waiter.png"></div>
+				<div class="voltar" onclick="menuChangePrevious()"><img src="icons/goback.png">
+				</div>
+				<div class="title_image">
+
+					<p class="title2">Transportes</p>
+				</div>
+				<div id="text_below_titleb">
+					<p class="paragrafos">Gostaria de assegurar transporte?</p>
+				</div>
+				<button class="assegurar_transporte" onclick="menuChange('menu_transportes')">
+				</button>
+				<button class="assegurar_transporte1" onclick="menuChange('menu_sair_2')">
+				</button>
+				<div class="barra_prograsso">
+					<img src="icons/progresso1.png">
+				</div>
+			</div>
+
+			<div class="content" id="menu_sair_2">
+				<div class="empregado"><img src="icons/waiter.png"></div>
+				<div class="voltar" onclick="menuChangePrevious()"><img src="icons/goback.png">
+				</div>
+				<div class="title_image">
+					<p class="title2">Pagamento</p>
+				</div>
+				<div id="text_below_titleb">
+					<p class="paragrafos">Por favor efetue o seu pagamento.</p>
+				</div>
+				<button class="pagar_moedas" onclick="popupPagar('pago')">
+				</button>
+				<button class="pagar_cartao" onclick="popupPagar('pago')">
+				</button>
+				<div id="pagamento_concluido">
+					<h1>Pagamento concluido</h1>
+
+					<button class="taxi_botao" id="pagamento_ok" onclick="popupPagar('ok')">OK</button>
+				</div>
+				<div class="barra_prograsso">
+					<img src="icons/progresso2.png">
+				</div>
+			</div>
+
+			<div class="content" id="menu_sair_3">
+				<div id="mensagem_obrigado">
+					<p>Obrigado por utilizar o BarISTa!</p>
+					<p>Até à próxima</p>
+				</div>
+				<div class="barra_prograsso">
+					<img src="icons/progresso3.png">
+				</div>
+			</div>
+			<div class="content" id="menu_musica">
+				<div class="home_screen" onclick="menuChange('inicial')"><img src="icons/home.png"></div>
+				<div class="voltar" onclick="menuChangePrevious()"><img src="icons/goback.png"></div>
+				<h1>Lista de reprodução</h1>
+				<div>
+					<table id="playlist">
+						<thead>
+							<tr>
+								<th></th>
+								<th>Música</th>
+								<th>Artista</th>
+								<th><img src="icons/clock1.png"></th>
+								<th>Classificação</th>
+								<th></th>
+								<th></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td> <img src="icons/musica.png"></img> </td>
+								<td>Youth</td>
+								<td>Troye Sivan</td>
+								<td>3:05</td>
+								<td><img src="icons/star.png" class="star_music"><img src="icons/star.png" class="star_music"><img src="icons/star1.png" class="star_music"><img src="icons/star1.png" class="star_music"><img src="icons/star1.png" class="star_music"></td>
+								<td><img id="like1" src="icons/like.png" onclick ="likeMusic(this)"></td>
+								<td><img id="dislike1" src="icons/like1.png" onclick ="dislikeMusic(this)"></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td>Love Yourself</td>
+								<td>Justin Bieber</td>
+								<td>3:53</td>
+								<td><img src="icons/star.png" class="star_music"><img src="icons/star.png" class="star_music"><img src="icons/star.png" class="star_music"><img src="icons/star.png" class="star_music"><img src="icons/star.png" class="star_music"></td>
+								<td><img id="like2" src="icons/like.png" onclick ="likeMusic(this)"></td>
+								<td><img id="dislike2" src="icons/like1.png" onclick ="dislikeMusic(this)"></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td>7 years</td>
+								<td>Lukas Graham</td>
+								<td>3:57</td>
+								<td><img src="icons/star.png" class="star_music"><img src="icons/star.png" class="star_music"><img src="icons/star.png" class="star_music"><img src="icons/star1.png" class="star_music"><img src="icons/star1.png" class="star_music"></td>
+								<td><img id="like3" src="icons/like.png" onclick ="likeMusic(this)"></td>
+								<td><img id="dislike3" src="icons/like1.png" onclick ="dislikeMusic(this)"></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td>Stressed Out</td>
+								<td>Twenty One Pilots</td>
+								<td>3:22</td>
+								<td><img src="icons/star.png" class="star_music"><img src="icons/star.png" class="star_music"><img src="icons/star.png" class="star_music"><img src="icons/star.png" class="star_music"><img src="icons/star.png" class="star_music"></td>
+								<td><img id="like4" src="icons/like.png" onclick ="likeMusic(this)"></td>
+								<td><img id="dislike4" src="icons/like1.png" onclick ="dislikeMusic(this)"></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td>Goosebumps</td>
+								<td>FEWS</td>
+								<td>2:56</td>
+								<td><img src="icons/star.png" class="star_music"><img src="icons/star.png" class="star_music"><img src="icons/star.png" class="star_music"><img src="icons/star1.png" class="star_music"><img src="icons/star1.png" class="star_music"></td>
+								<td><img id="like5" src="icons/like.png" onclick ="likeMusic(this)"></td>
+								<td><img id="dislike5" src="icons/like1.png" onclick ="dislikeMusic(this)"></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td>One Dance</td>
+								<td>Drake</td>
+								<td>2:53</td>
+								<td><img src="icons/star.png" class="star_music"><img src="icons/star.png" class="star_music"><img src="icons/star.png" class="star_music"><img src="icons/star.png" class="star_music"><img src="icons/star1.png" class="star_music"></td>
+								<td><img id="like6" src="icons/like.png" onclick ="likeMusic(this)"></td>
+								<td><img id="dislike6" src="icons/like1.png" onclick ="dislikeMusic(this)"></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td>Work</td>
+								<td>Rihanna</td>
+								<td>3:39</td>
+								<td><img src="icons/star.png" class="star_music"><img src="icons/star1.png" class="star_music"><img src="icons/star1.png" class="star_music"><img src="icons/star1.png" class="star_music"><img src="icons/star1.png" class="star_music"></td>
+								<td><img id="like7" src="icons/like.png" onclick ="likeMusic(this)"></td>
+								<td><img id="dislike7" src="icons/like1.png" onclick ="dislikeMusic(this)"></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td>Pillowtalk</td>
+								<td>Zayn</td>
+								<td>3:22</td>
+								<td><img src="icons/star.png" class="star_music"><img src="icons/star.png" class="star_music"><img src="icons/star1.png" class="star_music"><img src="icons/star1.png" class="star_music"><img src="icons/star1.png" class="star_music"></td>
+								<td><img id="like8" src="icons/like.png" onclick ="likeMusic(this)"></td>
+								<td><img id="dislike8" src="icons/like1.png" onclick ="dislikeMusic(this)"></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td>Hello</td>
+								<td>Adele</td>
+								<td>4:53</td>
+								<td><img src="icons/star.png" class="star_music"><img src="icons/star.png" class="star_music"><img src="icons/star.png" class="star_music"><img src="icons/star1.png" class="star_music"><img src="icons/star1.png" class="star_music"></td>
+								<td><img id="like9" src="icons/like.png" onclick ="likeMusic(this)"></td>
+								<td><img id="dislike9" src="icons/like1.png" onclick ="dislikeMusic(this)"></td>
+							</tr>
+							<tr>
+								<td></td>
+								<td>Low Life</td>
+								<td>Future</td>
+								<td>5:13</td>
+								<td><img src="icons/star.png" class="star_music"><img src="icons/star.png" class="star_music"><img src="icons/star1.png" class="star_music"><img src="icons/star1.png" class="star_music"><img src="icons/star1.png" class="star_music"></td>
+								<td><img id="like10" src="icons/like.png" onclick ="likeMusic(this)"></td>
+								<td><img id="dislike10" src="icons/like1.png" onclick ="dislikeMusic(this)"></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div id="botoes_lado_playlist">
+					<button class="playlist_botao_lado" onclick="adicionarMusica('abrir','')">Adicionar música à playlist</button>
+					<button class="playlist_botao_lado" onclick="partilharMusica('abrir','')">Partilhar música atual</button>
+				</div>
+			</div>
+
+			<div class="content" id="menu_top_musica">
+				<div class="home_screen" onclick="menuChange('inicial')"><img src="icons/home.png"></div>
+				<div class="voltar" onclick="menuChangePrevious()"><img src="icons/goback.png"></div>
+				<div class="tabs_menu" id="tabs_top_musica">
+					<div id="top_bar" onclick="tabChange('tabela_top_bar','top_bar','')">Top Bar</div>
+					<div id="top_semanal" onclick="tabChange('tabela_top_semanal','top_semanal','')">Top Semanal</div>
+					<div id="top_mundial" onclick="tabChange('tabela_top_mundial','top_mundial','')">Top Mundial</div>
+				</div>
+				<table id="tabela_top_bar">
+					<thead>
+						<tr>
+							<th></th>
+							<th>Música</th>
+							<th>Artista</th>
+							<th><img src="icons/clock1.png"></th>
+							<th>Classificação</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td></td>
+							<td>Stressed Out</td>
+							<td>Twenty One Pilots</td>
+							<td>3:22</td>
+							<td>100</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>Love Yourself</td>
+							<td>Justin Bieber</td>
+							<td>3:53</td>
+							<td>99</td>
+						</tr>
+						<tr>
+							<td><img src="icons/plus_musica.png" onclick="clickTopMusica(this,'You Send Me','Sam Cooke','2:43','95')"></td>
+							<td>You Send Me</td>
+							<td>Sam Cooke</td>
+							<td>2:43</td>
+							<td>95</td>
+						</tr>
+						<tr>
+							<td><img src="icons/plus_musica.png" onclick="clickTopMusica(this,'La femme','La femme','3:01','89')"></td>
+							<td>La femme</td>
+							<td>La femme</td>
+							<td>3:01</td>
+							<td>89</td>
+						</tr>
+						<tr>
+							<td><img src="icons/plus_musica.png" onclick="clickTopMusica(this,'My Number','Foals','4:00','85')"></td>
+							<td>My Number</td>
+							<td>Foals</td>
+							<td>4:00</td>
+							<td>85</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>One Dance</td>
+							<td>Drake</td>
+							<td>2:53</td>
+							<td>80</td>
+						</tr>
+						<tr>
+							<td><img src="icons/plus_musica.png" onclick="clickTopMusica(this,'Here I Go','Syd Barrett','3:13','78')"></td>
+							<td>Here I Go</td>
+							<td>Syd Barrett</td>
+							<td>3:13</td>
+							<td>78</td>
+						</tr>
+						<tr>
+							<td><img src="icons/plus_musica.png" onclick="clickTopMusica(this,'Love is to Die','Warpaint','4:51','74')"></td>
+							<td>Love is to Die</td>
+							<td>Warpaint</td>
+							<td>4:51</td>
+							<td>74</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>Goosebumps</td>
+							<td>FEWS</td>
+							<td>2:56</td>
+							<td>73</td>
+						</tr>
+						<tr>
+							<td><img src="icons/plus_musica.png" onclick="clickTopMusica(this,'Kool Thing','Sonic Youth','4:06','70')"></td>
+							<td>Kool Thing</td>
+							<td>Sonic Youth</td>
+							<td>4:06</td>
+							<td>70</td>
+						</tr>
+						<tr>
+							<td><img src="icons/plus_musica.png" onclick="clickTopMusica(this,'Full Moon','Woods','4:07','65')"></td>
+							<td>Full Moon</td>
+							<td>Woods</td>
+							<td>4:07</td>
+							<td>65</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>7 years</td>
+							<td>Lukas Graham</td>
+							<td>3:57</td>
+							<td>62</td>
+						</tr>
+						<tr>
+							<td><img src="icons/plus_musica.png" onclick="clickTopMusica(this,'You Broke My Cool','Pond','3:53','60')"></td>
+							<td>You Broke My Cool</td>
+							<td>Pond</td>
+							<td>3:53</td>
+							<td>60</td>
+						</tr>
+						<tr>
+							<td><img src="icons/plus_musica.png" onclick="clickTopMusica(this,'Reservoir','Metronomy','3:14','56')"></td>
+							<td>Reservoir</td>
+							<td>Metronomy</td>
+							<td>3:14</td>
+							<td>56</td>
+						</tr>
+						<tr>
+							<td><img src="icons/plus_musica.png" onclick="clickTopMusica(this,'High and Dry','Radiohead','4:17','52')"></td>
+							<td>High and Dry</td>
+							<td>Radiohead</td>
+							<td>4:17</td>
+							<td>52</td>
+						</tr>
+					</tbody>
+				</table>
+				<table id="tabela_top_semanal">
+					<thead>
+						<tr>
+							<th></th>
+							<th>Música</th>
+							<th>Artista</th>
+							<th><img src="icons/clock1.png"></th>
+							<th>Classificação</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><img src="icons/plus_musica.png" onclick="clickTopMusica(this,'Wonderwall','Oasis','4:18','98')"></td>
+							<td>Wonderwall</td>
+							<td>Oasis</td>
+							<td>4:18</td>
+							<td>98</td>
+						</tr>
+						<tr>
+							<td><img src="icons/plus_musica.png" onclick="clickTopMusica(this,'Teardrop','Massive Attack','5:30','92')"></td>
+							<td>Teardrop</td>
+							<td>Massive Attack</td>
+							<td>5:30</td>
+							<td>92</td>
+						</tr>
+						<tr>
+							<td><img src="icons/plus_musica.png" onclick="clickTopMusica(this,'i','Kendrick Lamar','3:51','88')"></td>
+							<td>i</td>
+							<td>Kendrick Lamar</td>
+							<td>3:51</td>
+							<td>88</td>
+						</tr>
+						<tr>
+							<td><img src="icons/plus_musica.png" onclick="clickTopMusica(this,'Kids','MGMT','5:02','85')"></td>
+							<td>Kids</td>
+							<td>MGMT</td>
+							<td>5:02</td>
+							<td>85</td>
+						</tr>
+						<tr>
+							<td><img src="icons/plus_musica.png" onclick="clickTopMusica(this,'Roads','Portishead','5:04','80')"></td>
+							<td>Roads</td>
+							<td>Portishead</td>
+							<td>5:04</td>
+							<td>80</td>
+						</tr>
+						<tr>
+							<td><img src="icons/plus_musica.png" onclick="clickTopMusica(this,'Hard Sun','Eddie Vedder','5:21','72')"></td>
+							<td>Hard Sun</td>
+							<td>Eddie Vedder</td>
+							<td>5:21</td>
+							<td>72</td>
+						</tr>
+						<tr>
+							<td><img src="icons/plus_musica.png" onclick="clickTopMusica(this,'VCR','The xx','2:57','70')"></td>
+							<td>VCR</td>
+							<td>The xx</td>
+							<td>2:57</td>
+							<td>70</td>
+						</tr>
+						<tr>
+							<td><img src="icons/plus_musica.png" onclick="clickTopMusica(this,'Zond','Pond','4:06','66')"></td>
+							<td>Zond</td>
+							<td>Pond</td>
+							<td>4:06</td>
+							<td>66</td>
+						</tr>
+						<tr>
+							<td><img src="icons/plus_musica.png" onclick="clickTopMusica(this,'Catamaran','Allah-Las','3:32','61')"></td>
+							<td>Catamaran</td>
+							<td>Allah-Las</td>
+							<td>3:32</td>
+							<td>61</td>
+						</tr>
+						<tr>
+							<td><img src="icons/plus_musica.png" onclick="clickTopMusica(this,'High Times','Elliott Smith','3:11','58')"></td>
+							<td>High Times</td>
+							<td>Elliott Smith</td>
+							<td>3:11</td>
+							<td>58</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>Pillowtalk</td>
+							<td>Zayn</td>
+							<td>3:22</td>
+							<td>31</td>
+							</tr>
+						<tr>
+							<td></td>
+							<td>Work</td>
+							<td>Rihanna</td>
+							<td>3:39</td>
+							<td>5</td>
+						</tr>
+					</tbody>
+				</table>
+				<table id="tabela_top_mundial">
+					<thead>
+						<tr>
+							<th></th>
+							<th>Música</th>
+							<th>Artista</th>
+							<th><img src="icons/clock1.png"></th>
+							<th>Classificação</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><img src="icons/plus_musica.png" onclick="clickTopMusica(this,'Naima','John Coltrane','4:18','100')"></td>
+							<td>Naima</td>
+							<td>John Coltrane</td>
+							<td>4:18</td>
+							<td>100</td>
+						</tr>
+						<tr>
+							<td><img src="icons/plus_musica.png" onclick="clickTopMusica(this,'Witchcraft','Marvin Gaaye','2:26','98')"></td>
+							<td>Witchcraft</td>
+							<td>Artista</td>
+							<td>2:26</td>
+							<td>98</td>
+						</tr>
+						<tr>
+							<td><img src="icons/plus_musica.png" onclick="clickTopMusica(this,'Teenage Sonata','Sam Cooke','2:40','97')"></td>
+							<td>Teenage Sonata</td>
+							<td>Sam Cooke</td>
+							<td>2:40</td>
+							<td>97</td>
+						</tr>
+						<tr>
+							<td><img src="icons/plus_musica.png" onclick="clickTopMusica(this,'Stuck On Puzzle','Alex Turner','3:31','90')"></td>
+							<td>Stuck On Puzzle</td>
+							<td>Alex Turner</td>
+							<td>3:31</td>
+							<td>90</td>
+						</tr>
+						<tr>
+							<td><img src="icons/plus_musica.png" onclick="clickTopMusica(this,'Then What','Balthazar','4:09','85')"></td>
+							<td>Then What</td>
+							<td>Balthazar</td>
+							<td>4:09</td>
+							<td>85</td>
+						</tr>
+						<tr>
+							<td><img src="icons/plus_musica.png" onclick="clickTopMusica(this,'Bitter','Palace','3:54','80')"></td>
+							<td>Bitter</td>
+							<td>Palace</td>
+							<td>3:54</td>
+							<td>80</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>Hello</td>
+							<td>Adele</td>
+							<td>4:53</td>
+							<td>79</td>
+							</tr>
+						<tr>
+							<td><img src="icons/plus_musica.png" onclick="clickTopMusica(this,'Here I Go','Syd Barrett','3:13','78')"></td>
+							<td>Here I Go</td>
+							<td>Syd Barrett</td>
+							<td>3:13</td>
+							<td>78</td>
+						</tr>
+						<tr>
+							<td><img src="icons/plus_musica.png" onclick="clickTopMusica(this,'Fever','Peggy Lee','3:19','70')"></td>
+							<td>Fever</td>
+							<td>Peggy Lee</td>
+							<td>3:19</td>
+							<td>70</td>
+						</tr>
+						<tr>
+							<td><img src="icons/plus_musica.png" onclick="clickTopMusica(this,'Full Moon','Woods','4:07','65')"></td>
+							<td>Full Moon</td>
+							<td>Woods</td>
+							<td>4:07</td>
+							<td>65</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>Youth</td>
+							<td>Troye Sivan</td>
+							<td>3:05</td>
+							<td>55</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>Low Life</td>
+							<td>Future</td>
+							<td>5:13</td>
+							<td>20</td>
+						</tr>
+					</tbody>
+				</table>					
+			</div>
+
+
+			<div class="empregado">
+				<img src="icons/waiter.png" onclick="popupEmpregado('abrir')">
+			</div>
+			<div id="disable_buttons_empregado">
+				<div id="janela_empregado">
+					<h1>Chamar empregado</h1>
+					<p>Quer mesmo chamar um empregado?</p>
+					<button class="taxi_botao" id="empregado_sim" onclick="popupEmpregado('sim')">Sim</button>
+					<button class="taxi_botao" id="empregado_nao" onclick="popupEmpregado('nao')">Não</button>
+				</div>
+				<div id="empregado_ok">
+					<h1>Chamar empregado</h1>
+					<p>Empregado chamado</p>
+					<button class="taxi_botao" id="empregado_ok_btn" onclick="popupEmpregado('ok')">OK</button>
+				</div>
+			</div>
+			<div id="teclado">
+				<img src="icons/keyboard.png"></img>
+			</div>
+			<div id="cancel_taxi" style="z-index:10" onclick="popupCancTaxi('abrir')">
+				Cancelar Táxi
+			</div>
+			<div id="timer_taxi" style="font-size: 20px;z-index:10"></div>
+			<div id="disable_buttons_cancTaxi">
+				<div id="confirm_canc_taxi">
+					<h1>Cancelar táxi</h1>
+					<p>Quer mesmo cancelar a chamada do táxi?</p>
+					<button class="taxi_botao" id="taxi_canc_sim" onclick="popupCancTaxi('cancelar')">Sim</button>
+					<button class="taxi_botao" id="taxi_canc_nao" onclick="popupCancTaxi('fechar')">Não</button>
+				</div>
+				<div id="ok_canc_taxi">
+					<h1>Cancelar táxi</h1>
+					<p>Táxi cancelado</p>
+					<button class="taxi_botao" id="taxi_canc_ok" onclick="popupCancTaxi('ok')">OK</button>
+				</div>
+			</div>
+			<div id="disable_buttons_concluirPedidoB" style="display: none">
+				<div id="concluir_pedido_descricao">
+					<h1>Descrição do pedido</h1>
+					<div id="pedido_descricao">
+
+					</div>
+					<button class="taxi_botao" id="continuar_descricao" onclick="concluirPedidoBebidas('continuar')">Continuar</button>
+					<button class="taxi_botao" id="cancelar_descricao" onclick="concluirPedidoBebidas('cancelar')">Cancelar</button>
+				</div>
+				<div id="concluir_pedido_bb">
+					<h1>Concluir Pedido</h1>
+					<button class="taxi_botao" id="pagar_ok" onclick="concluirPedidoBebidas('p_mais_tarde')">Pagar mais tarde</button>
+					<button class="taxi_botao" id="pagar_ok" onclick="concluirPedidoBebidas('p_imediato')">Pagar agora</button>
+					<button class="taxi_botao" id="pagar_ok" onclick="concluirPedidoBebidas('cancelar')">Cancelar</button>
+				</div>
+				<div id="pagamento_imediato_b" style="display: none">
+					<img src="icons/home.png" onclick="concluirPedidoBebidas('cancelar')">
+					<h1>Pagar Agora</h1>
+					<button class="pagar_moedas_sidebar" onclick="concluirPedidoBebidas('p_imediato_conf')">
+					</button>
+					<button class="pagar_cartao_sidebar" onclick="concluirPedidoBebidas('p_imediato_conf')">
+					</button>
+				</div>
+				<div id="ok_pagar_bebidas" style="display: none">
+					<h1>Pagamento concluído</h1>
+					<button class="taxi_botao" id="ok_pagar" onclick=" concluirPedidoBebidas('fechar_conf')">OK</button>
+				</div>
+			</div>
+			<div id="disable_buttons_pagar" style="display: none">
+				<div id="descricao_sidebar">
+					<h1>Pedidos acumulados</h1>
+					<div id="pedidos_sidebar">
+						
+					</div>
+					<button class="taxi_botao" id="continuar_descricao_sidebar" onclick="pagar('abrir')">Continuar</button>
+					<button class="taxi_botao" id="cancelar_descricao_sidebar" onclick="pagar('nao')">Cancelar</button>
+				</div>
+				<div id="pagar_sidebar">
+					<h1>Efetuar Pagamento</h1>
+					<p>Quer mesmo efetuar o pagamento?</p>
+					<button class="taxi_botao" id="pagar_sim" onclick="pagar('sim')">Sim</button>
+					<button class="taxi_botao" id="pagar_nao" onclick="pagar('nao')">Não</button>
+				</div>
+				<div id="ecra_pagar" style="display: none">
+					<img src="icons/home.png" onclick="pagar('nao')">
+					<h1>Pagar Agora</h1>
+					<button class="pagar_moedas_sidebar" onclick="pagar('pagou')">
+					</button>
+					<button class="pagar_cartao_sidebar" onclick="pagar('pagou')">
+					</button>
+				</div>
+				<div id="ok_pagar_tudo" style="display: none">
+					<h1>Pagamento concluído</h1>
+					<button class="taxi_botao" id="ok_pagar_sidebar" onclick=" pagar('ok')">OK</button>
+				</div>
+			</div>
+			<div id="disable_buttons_partilhar_musica" style="display: none">
+				<div id="partilhar">
+					<img src="icons/home.png" onclick="partilharMusica('sair','')">
+					<h1>Partilhar Música</h1>
+					<p>Escolha onde deseja partilhar a música</p>
+					<div id="img_partilhar">
+						<img src="icons/tumblr.png" onclick="partilharMusica('tumblr','')">
+						<img src="icons/google+.png" onclick="partilharMusica('google','')">
+						<img src="icons/twitter.png" onclick="partilharMusica('twitter','')">
+						<img src="icons/facebook1.png" onclick="partilharMusica('facebook','')">
+					</div>
+				</div>
+				<div id="facebook" style="display: none">
+					<img src="icons/facebook1.png">
+					<h1>Partilhar Música no facebook</h1>
+					<p>Quer partilhar a música Youth - Troye Sivan?</p>
+					<button class="partilhar_sim" onclick="partilharMusica('partilhar','facebook')">Partilhar</button>
+					<button class="partilhar_nao" onclick="partilharMusica('sair','')">Cancelar</button>
+					
+				</div>
+				<div id="twitter" style="display: none">
+					<img src="icons/twitter.png">
+					<h1>Partilhar Música no twitter</h1>
+					<p>Quer partilhar a música Youth - Troye Sivan?</p>
+					<button class="partilhar_sim" onclick="partilharMusica('partilhar','twitter')">Partilhar</button>
+					<button class="partilhar_nao" onclick="partilharMusica('sair','')">Cancelar</button>
+				</div>
+				<div id="google" style="display: none">
+					<img src="icons/google+.png">
+					<h1>Partilhar Música no Google+</h1>
+					<p>Quer partilhar a música Youth - Troye Sivan?</p>
+					<button class="partilhar_sim" onclick="partilharMusica('partilhar','google')">Partilhar</button>
+					<button class="partilhar_nao" onclick="partilharMusica('sair','')">Cancelar</button>
+				</div>
+				<div id="tumblr" style="display: none">
+					<img src="icons/tumblr.png">
+					<h1>Partilhar Música no Tumblr</h1>
+					<p>Quer partilhar a música Youth - Troye Sivan?</p>
+					<button class="partilhar_sim" onclick="partilharMusica('partilhar','tumblr')">Partilhar</button>
+					<button class="partilhar_nao" onclick="partilharMusica('sair','')">Cancelar</button>
+				</div>
+				<div id="iniciar_sessao" style="display: none">
+					<img id="logo_login" src="icons/facebook1.png">
+					<h1>Iniciar sessão</h1>
+					<img id="home_partilhar" src="icons/home.png" onclick="partilharMusica('sair','')">
+					<h2>Nome de utilizador: </h2><input id="input_user" name="search" value="" onfocus="show_teclado()" onblur="hide_teclado()" onkeyup="check_login()" class="form-control1" placeholder="nome de utilizador" type="text">
+					<h2>Palavra-passe: </h2><input type="password" id="input_pass" name="search" value="" onfocus="show_teclado()" onblur="hide_teclado()" onkeyup="check_login()" class="form-control1" placeholder="palavra-passe" type="text">
+					<span class="input-group-btn" style="width: 8px" style="display: none">
+						<button id="submit_login" class="btn btn-default" type="submit" onclick="clear_login(); partilharMusica('partilhou','')" disabled>Iniciar Sessão</button>
+					</span>
+				</div>
+				
+				<div id="partilhado" style="display: none">
+					<img src="icons/yes1.png">
+					<h1>Música Partilhada!</h1>
+					<button class="partilhar_ok" onclick="partilharMusica('sair','')">OK</button>
+				</div>
+			</div>
+			<div id="disable_buttons_ajuda" style="display:none">
+				<div class="ecra_ajuda" id="ajuda_inicial">
+					<h1>Ajuda - BarISTa</h1>
+					<img src="icons/home.png" onclick="ajuda('fechar')">
+					<p>Bem-vindo à Ajuda do BarISTa, onde pode consultar e procurar tópicos de Ajuda sobre a utilização do sistema. </p>
+					<p>Para tal seleccione a opção Ajuda nos vários menus interactivos.</p>
+					<p>Se pretender chamar um empregado à mesa selecione a opção <img src="icons/waiter.png" style="top:373px; right:645px"></p>
+					<p>Se pretender sair do BarISTa seleccione a opção <img src="icons/exit1.png" style="top:405px; right:321px; border-radius:6px;"></p>
+				</div>
+				<div class="ecra_ajuda" id="ajuda_bebidas">
+					<h1>Ajuda - Bebidas</h1>
+					<img src="icons/home.png" onclick="ajuda('fechar')">
+					<p>Pode ver a lista de bebidas ordenada por popularidade,preço e ordem alfabética.</p>
+					<p>Pode pesquisar por uma bebida específica.</p>
+					<p>Pode seleccionar as bebidas usando a lista.</p>
+					<p>Pode personalizar a sua bebida com as opções disponíveis.</p>
+					<p>Pode confirmar o seu pedido, decidindo se deseja pagar agora ou pagar mais tarde.</p>
+				</div>
+				<div class="ecra_ajuda" id="ajuda_comida">
+					<h1>Ajuda - Comida</h1>
+					<img src="icons/home.png" onclick="ajuda('fechar')">
+					<p>Pode ver a lista de comidas ordenada segundo popularidade,preço e ordem alfabética.</p>
+					<p>Pode pesquisar por uma comida específica.</p>
+					<p>Pode seleccionar as comidas usando a lista.</p>
+					<p>Pode personalizar a sua comida com as opções disponíveis.</p>
+					<p>Pode confirmar o seu pedido, decidindo se deseja pagar agora ou pagar mais tarde.</p>
+				</div>
+				<div class="ecra_ajuda" id="ajuda_musica">
+					<h1>Ajuda - Música</h1>
+					<img src="icons/home.png" onclick="ajuda('fechar')">
+					<p>Pode ver a lista de reprodução do bar, o que inclui a música a tocar atualmente e as músicas seguintes, adicionadas por si, ou por outros clientes.</p>
+					<p>Pode votar nas músicas, o que influencia a sua classificação, baseada na votação dos clientes.</p>
+					<p>Pode partilhar a música que está a tocar no momento numa numa rede social.</p>
+					<p>Pode adicionar músicas, que se encontram nos tops, à lista de reprodução do bar.</p>
+					<p>Não pode adicionar músicas que já pertençam a lista de reprodução</p>
+				</div>
+				<div class="ecra_ajuda" id="ajuda_transportes">
+					<h1>Ajuda - Transportes</h1>
+					<img src="icons/home.png" onclick="ajuda('fechar')">
+					<p>Pode seleccionar de entre as opções qual o meio de transporte cujas informações prefere consultar.</p>
+					<p>Pode consultar o mapa, bem como os tempos de espera e informações relativas aos transportes autocarro, metro e comboio.</p>
+					<p>Pode chamar um táxi indicando o seu destino. E tem também a possibilidade de depois o cancelar, se desejar.</p>
+				</div>
+				<div class="ecra_ajuda" id="ajuda_metro">
+					<h1>Ajuda - Metro</h1>
+					<img src="icons/home.png" onclick="ajuda('fechar')">
+					<p>Pode seleccionar o mapa interactivo de forma a consultar o percurso de metro que pretende efectuar.</p>
+					<p>O local onde se encontra está assinalado no mapa.</p>
+				</div>
+				<div class="ecra_ajuda" id="ajuda_comboios">
+					<h1>Ajuda - Comboios</h1>
+					<img src="icons/home.png" onclick="ajuda('fechar')">
+					<p>Pode seleccionar as várias opções de linhas de comboio existentes consultando o mapa e o tempo de espera associados.</p>
+				</div>
+				<div class="ecra_ajuda" id="ajuda_autocarros">
+					<h1>Ajuda - Autocarros</h1>
+					<img src="icons/home.png" onclick="ajuda('fechar')">
+					<p>Pode consultar a lista dos próximos autocarros bem como o tempo de espera de cada um.</p>
+					<p>Pode seleccionar o mapa interactivo de forma a consultar a localização das várias paragens.</p>
+				</div>
+				<div class="ecra_ajuda" id="ajuda_taxi">
+					<h1>Ajuda - Taxi</h1>
+					<img src="icons/home.png" onclick="ajuda('fechar')">
+					<p>Pode chamar um taxi indicando o seu destino.</p>
+					<p>Pode consultar o tempo restante para que o taxi que chamou chegue, e é avisad quando este chegar.</p>
+					<p>Tem também a opção de cancelar o táxi, depois de chamado.</p>
+				</div>
+			</div>
+			<div id="disable_sidebar" style="display:none">
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/jquery-2.2.2.min.js"></script>
+	<script type="text/javascript" src="js/jquery.tablesorter.js"></script>
+	<script type="text/javascript" src="js/jquery.tablesorter.widgets.js"></script>
+	<script type="text/javascript" src="js/jquery.kinetic.min.js"></script>
+	<script type="text/javascript" src="scripts.js"></script>
+</body>
+
+</html>
