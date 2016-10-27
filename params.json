@@ -1,0 +1,6 @@
+{
+  "name": "LEIC_projects",
+  "tagline": "Projects for my Computer Science and Engineering degree",
+  "body": "#LEICprojects\r\n\r\n## Here i store all the programming projects i did in university for my Computer Science and Engineering degree.\r\n\r\n### 1st year:\r\n- Foundations of Programming (Python)\r\n- Introduction to Computer Architecture (Assembly)\r\n- Introduction to Algorithms and Data Structures (C)\r\n- Logic for Programming (Prolog)\r\n\r\n***\r\n\r\n### 2nd year:\r\n- Object-Oriented Programming (Java)\r\n- Operating Systems (C)\r\n- Analysis and Synthesis of Algorithms (C++)\r\n- Human-Computer Interaction (HTML, CSS, JavaScript)\r\n\r\n***\r\n\r\n_(Most of these are group projects done in groups of 2 or 3 people)_\r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
