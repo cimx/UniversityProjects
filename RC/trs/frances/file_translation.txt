@@ -1,0 +1,5 @@
+bonjour.jpg ola.jpg
+chien.jpg cao.jpg
+pomme.jpg maca.jpg
+madame.jpg senhora.jpg
+merci.jpg obrigado.jpg
