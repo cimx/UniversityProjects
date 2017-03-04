@@ -14,4 +14,10 @@ Here i store all the programming projects i did in university for my Computer Sc
 - Analysis and Synthesis of Algorithms (C++)
 - Human-Computer Interaction (HTML, CSS, JavaScript)
 
+3rd year:
+- Databases (SQL, PHP)
+- Computer Graphics (JavaScript)
+- Artificial Intelligence (Lisp)
+- Computer Networks (Python)
+
 (Most of these are group projects done in groups of 2 or 3 people)
