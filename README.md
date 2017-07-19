@@ -15,7 +15,7 @@ Here i store all the programming projects i did in university for my Computer Sc
 - IPM - Human-Computer Interaction (HTML, CSS, JavaScript)
 
 3rd year:
-- BD - Databases (SQL, PHP)
+- DB - Databases (SQL, PHP)
 - CG - Computer Graphics (JavaScript)
 - IA - Artificial Intelligence (Lisp)
 - RC - Computer Networks (Python)
