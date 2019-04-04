@@ -1,4 +1,4 @@
-# LEICprojects
+# University Projects
 
 Here i store all the programming projects i did in university for my Computer Science and Engineering degree.
 
