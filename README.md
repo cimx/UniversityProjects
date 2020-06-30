@@ -24,6 +24,7 @@ Here i store all the programming projects i did in university for my Computer Sc
 
 4th year:
 - CVI -  Interactive Visual Communication (Mathlab)
+- AASMA - Autonomous Agents and Multi-Agent Systems (Java)
 
 5th year:
 - LN - Natural Language (Python, R)
