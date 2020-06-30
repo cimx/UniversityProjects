@@ -28,6 +28,6 @@ Here i store all the programming projects i did in university for my Computer Sc
 
 5th year:
 - LN - Natural Language (Python, R)
-- CD - DataScience (Python)
+- CD - Data Science (Python)
 
 (Most of these are group projects done in groups of 2 or 3 people)
