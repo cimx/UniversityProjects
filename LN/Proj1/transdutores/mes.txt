@@ -1,0 +1,15 @@
+0	0	0	eps
+0	1	1	eps
+0	2	1	janeiro
+0	2	2	fevereiro
+0	2	3	marco
+0	2	4	abril
+0	2	5	maio
+0	2	6	junho
+0	2	7	julho
+0	2	8	agosto
+0	2	9	setembro
+1	2	0	outubro
+1	2	1	novembro
+1	2	2	dezembro
+2

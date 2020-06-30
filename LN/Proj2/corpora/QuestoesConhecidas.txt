@@ -1,0 +1,208 @@
+actor_name 	What are the most relevant actors in Bad Boys? 
+actor_name 	What actors entered Titanic? 
+character_name 	Which characters were there on Goldfinger? 
+character_name 	What characters can be seen in Iron Man? 
+spoken_language 	What are the languages spoken in Ocean's Eleven? 
+person_name 	Who was the director of The Great Gatsby? 
+actor_name 	Who starred in Batman Begins? 
+actor_name 	What actor played the part of Jake Sully in Avatar? 
+actor_name 	Who entered the movie The Matrix? 
+actor_name 	What actors played a part in Toy Story 2? 
+actor_name 	What actors starred in Ocean's Eleven? 
+character_name 	What were the characters in The Lego Movie? 
+character_name 	What characters entered in Ben-Hur? 
+character_name 	What were the parts played in the movie Joan of Arc? 
+actor_name 	What actor played Frodo in The Lord of the Rings: The Fellowship of the Ring? 
+actor_name 	Who has played the part of James Bond in Spectre? 
+character_name 	What was the character that Sam Worthington played in Avatar? 
+character_name 	What was the part played in Inception by Leonardo DiCaprio? 
+character_name 	What was the role taken by Brad Pitt in the movie Ocean's Eleven? 
+character_name 	What role did George Clooney play in Gravity? 
+character_name 	Tell me the role played by Angelina Jolie in The Tourist. 
+character_name 	What was the role played by Tim Allen in Toy Story 3? 
+actor_name 	Who played the part of Woody in Toy Story? 
+actor_name 	Who voiced Papa Smurf in the movie The Smurfs? 
+actor_name 	What actor played the role of Jake Sully in Avatar? 
+actor_name 	What are the actors that participated with Johnny Depp in Pirates of the Caribbean: On Stranger Tides? 
+actor_name 	Who acted with Frank Langella in The Ninth Gate? 
+actor_name 	Who acted with Julia Roberts in Pretty Woman? 
+actor_name 	Which actors participated in Training Day along side Denzel Washington? 
+actor_name 	Who acted with Anthony Hopkins in The Silence of the Lambs? 
+runtime 	What is the running time of Into the Storm? 
+runtime 	What is the lenght of the movie Australia? 
+runtime 	How long is the movie Million Dollar Baby? 
+runtime 	What is the running time of Rush Hour 3? 
+runtime 	What is the run time of The Matrix? 
+runtime 	How long does San Andreas last? 
+overview 	What is the overview of Gothika? 
+overview 	Give me the overview of Eragon. 
+overview 	Overview of Avatar. 
+overview 	What's the overview of the movie Star Trek? 
+overview 	Tell me the overview of Suicide Squad. 
+budget 	How much budget did Valkyrie have? 
+budget 	What was the budget of Furious 7? 
+budget 	What was American Gangster's budget? 
+budget 	Money spent on The Matrix? 
+budget 	Toy Story 2 had how much budget? 
+original_language 	What is the original language spoken in Das Leben der Anderen? 
+original_language 	What is the main language used in the movie Wanted? 
+original_language 	What is the most used language in Star Trek? 
+original_language 	What is the main language in Rush Hour 2? 
+original_language 	Which idiom was most used on The Tourist? 
+release_date 	From what year is The Incredibles? 
+release_date 	What year did the movie Casablanca debut? 
+release_date 	In which year was The Island produced? 
+release_date 	In which year was Some Like It Hot produced? 
+release_date 	In what year did Star Wars come out? 
+release_date 	On what month was The Avengers released? 
+release_date 	In what month did Hamlet make its debut? 
+release_date 	San Andreas was released in what month? 
+release_date 	Tell me what month was when Casino Royale made its debut. 
+release_date 	The debut of The Matrix occured in what month? 
+release_date 	What is the release date of The Imitation Game? 
+release_date 	When was Mad Max 2 released? 
+release_date 	When was the debut of Shutter Island? 
+release_date 	When did the The Matrix Reloaded come out on cinemas? 
+release_date 	Release date of Inside Out? 
+revenue 	What was the profit made by the movie Scream 2? 
+revenue 	What was the revenue of Rocky Balboa? 
+revenue 	How much profit did The Matrix Reloaded generate? 
+revenue 	What was the box office made by Terminator Genisys? 
+revenue 	How much money was made with the movie Madagascar? 
+original_title 	In what movies did George Clooney take part as director? 
+original_title 	What movies did Christopher Nolan direct? 
+original_title 	Which movies were directed by Ridley Scott? 
+original_title 	What movies has Guillermo del Toro directed? 
+original_title 	Throught his career, which movies has Steven Spielberg directed? 
+production_country 	Where was The Ninth Gate shot? 
+production_country 	Where was The Passion of the Christ produced? 
+production_country 	In which country was Lost in Translation shot? 
+production_country 	In which countries was Transformers shot? 
+production_country 	In what countries was Lara Croft: Tomb Raider produced? 
+production_company 	Which companies produced Jurassic Park? 
+production_company 	What companies were responsible for the production of the movie Hellboy? 
+production_company 	What were the companies that produced Divergent? 
+production_company 	What movie companies produced the movie The Hunger Games? 
+production_company 	Which companies produced Independence Day? 
+spoken_language 	Which tongues can be heard in The Italian Job? 
+spoken_language 	During the movie The Matrix, what languages are spoken? 
+spoken_language 	What are the languages used in Cars 2? 
+spoken_language 	What languages can be heard in American Sniper? 
+original_title 	In what movies does Johnny Depp appear? 
+original_title 	Tom Hanks took part in which movies? 
+original_title 	Mr. T entered which movies? 
+original_title 	In which movies did Angelina Jolie enter? 
+original_title 	In how many movies did Matt Damon enter? 
+original_title 	Russell Crowe has participated in how many movies? 
+original_title 	During his career, how many movies did Michael Bay direct? 
+original_title 	How many movies did Steven Spielberg direct? 
+original_title 	How many movies has George Lucas directed? 
+original_title 	How many movies were directed by Mel Gibson? 
+original_title 	Tell me how many movies were directed by Christopher Nolan. 
+original_title 	Morgan Freeman participated in how many movies during his career? 
+original_title 	What was the first movie in which Tom Hanks starred in? 
+original_title 	With which movie did Al Pacino start his acting career? 
+original_title 	With which movie did Angelina Jolie start her acting career? 
+original_title 	What was the first movie to feature George Clooney? 
+original_title 	What was the first movie ever to have Brad Pitt? 
+original_title 	Robert Zemeckis started directing in which movie? 
+original_title 	What was the first movie to be directed by Clint Eastwood? 
+original_title 	Tom Hanks started his directing career with what movie? 
+original_title 	What was the first movie directed by Luc Besson? 
+original_title 	What was Steven Spielberg's first movie? 
+original_title 	In which movies did Scarlett Johansson take part in? 
+genre 	What are the genres of the movie Notting Hill? 
+genre 	The movie Grease belongs to which genres? 
+genre 	What kind of movie is A.I. Artificial Intelligence? 
+genre 	To which genres does the movie Pulp Fiction belong? 
+genre 	Tell me the genres of Avatar. 
+keyword 	What are the keywords for the movie Warcraft? 
+keyword 	Keywords of Cloud Atlas. 
+keyword 	Tell me the keywords of Divergent. 
+keyword 	What are the most relevant words of Casino Royale? 
+keyword 	What are the keywords of Finding Nemo? 
+person_name 	Which director directed Avatar? 
+person_name 	Who was Inception's director? 
+person_name 	Show me the director of Toy Story. 
+person_name 	Who was the director of Braveheart? 
+person_name 	Spectre was directed by who? 
+person_name 	Who directed Transformers: Age of Extinction? 
+vote_avg 	What was the rating of Inception? 
+vote_avg 	From 0 to 10, what was the average vote given to Braveheart? 
+vote_avg 	What was the rating given to the movie Capote? 
+original_title 	What movies did John Woo direct? 
+original_title 	Which movies were made by Stanley Kubrick? 
+vote_avg 	In average, what was the rating given to the movie Alexander? 
+vote_avg 	What was the vote average of Batman Rises? 
+original_title 	What is the latest movie in which Adam Sandler enters? 
+original_title 	What is the latest movie featuring Tom Hanks? 
+original_title 	Most recent movie to feature Daniel Craig? 
+original_title 	What is the most recent movie where Christopher Walken can be seen? 
+original_title 	What is the last movie in which Tom Cruise appears in? 
+original_title 	What is the oldest movie ever made? 
+original_title 	What is the oldest movie produced? 
+original_title 	What was the movie produced the longest time ago? 
+original_title 	What's the title of the oldest movie? 
+original_title 	What was the first movie to be released? 
+original_title 	What is the most recent movie to be released? 
+original_title 	What was the latest movie to debut? 
+original_title 	Which movie was most recently released? 
+original_title 	Tell me what is the latest movie to be released. 
+original_title 	Most recent movie to premier in cinemas? 
+actor_name 	How many actors participated in Cars? 
+actor_name 	Number of actors in Iron Man 2? 
+actor_name 	How many actors played a role in Avatar? 
+actor_name 	What's the number of actors involved in the making of Braveheart? 
+actor_name 	The production of Interstellar involved how many actors? 
+character_name 	How many characters were in total in The Matrix Revolutions? 
+character_name 	How many characters entered the movie Cloud Atlas? 
+character_name 	In total, how many characters are there in Spectre? 
+character_name 	Show me the character count of Titanic. 
+character_name 	The movie The Avengers has how many characters? 
+original_title 	What was the most profitable movie of all time? 
+original_title 	Which movie made the most revenue? 
+original_title 	What was the most profitable movie ever made? 
+original_title 	What was the movie that generated the largest profit? 
+original_title 	What was the movie that generated the largest box office? 
+original_title 	What was the least profitable movie ever? 
+original_title 	What movie made the smallest box office? 
+original_title 	Of all the movies made, what was the one that generated the smallest revenue? 
+original_title 	Movie that made the least profit? 
+original_title 	Which movie generated the least income? 
+original_title 	What is the longest movie ever made? 
+original_title 	What's the movie that lasts the longest? 
+original_title 	Show me the longest movie on record. 
+original_title 	Movie with longest run time? 
+original_title 	Which movie has the longest run-time? 
+original_title 	What is the shortest movie ever released? 
+original_title 	What is the movie lasts the least? 
+original_title 	Tell me the title of shortest movie ever released. 
+original_title 	From all the movies made, what's the shortest one? 
+original_title 	Which movie has the shortest run time? 
+original_title 	Which movie has the highest rating? 
+original_title 	Which movie was given the best rating? 
+original_title 	What is the best rated movie? 
+original_title 	In average, what's the best rated movie? 
+original_title 	What movie received the best vote average? 
+original_title 	What was the movie that received the worst review ever? 
+original_title 	Tell me what's the movie with the lowest rating. 
+original_title 	Out of all movies produced, what is the one with the worst rating? 
+original_title 	In average, what movie has received the worst votes? 
+original_title 	Which movie had the worst vote average? 
+production_company 	How many companies produced Quantum of Solace? 
+production_company 	How many companies were involved in the production of Despicable Me? 
+production_company 	The movie Fight Club was produced by how many companies? 
+production_company 	The production of The Jungle Book involved how many companies? 
+production_company 	Paycheck was produced by how many companies? 
+production_country 	In how many countries was 2012 shot? 
+production_country 	King Kong was shot in how many countries? 
+production_country 	The movie The Tourist was produced in how many countries? 
+production_country 	The production of Inglourious Basterds was made in how many countries? 
+production_country 	What's the number of countries where The Matrix was produced in? 
+spoken_language 	How many different languages are spoken in Inglourious Basterds? 
+spoken_language 	During the movie The Da Vinci Code, how many languages are used? 
+spoken_language 	How many languages can be heard in The Tourist? 
+spoken_language 	On the movie Quantum of Solace, how many idioms can be heard? 
+spoken_language 	What's the number of spoken languages in American Sniper? 
+original_title 	In how many movies did Michael Fassbender play a part in? 
+original_title 	Meryl Streep has participated in how many movies? 

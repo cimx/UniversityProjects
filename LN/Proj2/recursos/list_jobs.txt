@@ -1,0 +1,419 @@
+24 Frame Playback
+2D Artist
+2D Supervisor
+3D Animator
+3D Artist
+3D Coordinator
+3D Modeller
+3D Supervisor
+ADR & Dubbing
+ADR Editor
+ADR Supervisor
+ADR Voice Casting
+Actor
+Adaptation
+Additional Camera
+Additional Dialogue
+Additional Editing
+Additional Editorial Assistant
+Additional Music
+Additional Photography
+Additional Sound Re-Recording Mixer
+Additional Soundtrack
+Additional Still Photographer
+Additional Writing
+Administration
+Aerial Camera
+Aerial Camera (suggest in addition to Helicopter Camera).
+Aerial Camera Technician
+Aerial Coordinator
+Aerial Director of Photography
+Ager/Dyer
+Animal Coordinator
+Animal Wrangler
+Animation
+Animation Department Coordinator
+Animation Director
+Animation Fix Coordinator
+Animation Manager
+Animation Production Assistant
+Animation Supervisor
+Animatronic and Prosthetic Effects
+Animatronics Designer
+Animatronics Supervisor
+Apprentice Sound Editor
+Armorer
+Armory Coordinator
+Art Department Assistant
+Art Department Coordinator
+Art Department Manager
+Art Direction
+Assistant Art Director
+Assistant Costume Designer
+Assistant Director
+Assistant Editor
+Assistant Music Supervisor
+Assistant Production Coordinator
+Assistant Production Manager
+Assistant Property Master
+Assistant Set Dresser
+Assistant Sound Editor
+Associate Choreographer
+Associate Editor
+Associate Producer
+Author
+Background Designer
+Best Boy Electric
+Best Boy Electrician
+Book
+Boom Operator
+CG Animator
+CG Painter
+CG Supervisor
+CGI Supervisor
+Cableman
+Camera Department Manager
+Camera Intern
+Camera Loader
+Camera Operator
+Camera Supervisor
+Camera Technician
+Carpenter
+Casting
+Casting Assistant
+Casting Associate
+Casting Consultant
+Character Designer
+Character Technical Supervisor
+Characters
+Chef
+Chief Lighting Technician
+Choreographer
+Cinematography
+Co-Art Director
+Co-Costume Designer
+Co-Director
+Co-Editor
+Co-Executive Producer
+Co-Producer
+Co-Writer
+Color Designer
+Color Timer
+Comic Book
+Compositors
+Conceptual Design
+Conceptual Illustrator
+Conductor
+Construction Coordinator
+Construction Foreman
+Consulting Producer
+Continuity
+Costume Coordinator
+Costume Design
+Costume Illustrator
+Costume Supervisor
+Craft Service
+Creative Consultant
+Creative Producer
+Creator
+Creature Design
+Creature Technical Director
+Department Administrator
+Development Manager
+Dialect Coach
+Dialogue
+Dialogue Editor
+Digital Compositors
+Digital Effects Producer
+Digital Effects Supervisor
+Digital Intermediate
+Digital Producer
+Directing Lighting Artist
+Director
+Director of Photography
+Documentation & Support
+Dolby Consultant
+Dolly Grip
+Draughtsman
+Driver
+Editor
+Editorial Coordinator
+Editorial Manager
+Editorial Production Assistant
+Editorial Services
+Editorial Staff
+Electrician
+Epk Camera Operator
+Executive Consultant
+Executive In Charge Of Post Production
+Executive In Charge Of Production
+Executive Music Producer
+Executive Producer
+Executive Visual Effects Producer
+Executive in Charge of Finance
+Fight Choreographer
+Finance
+First Assistant Camera
+First Assistant Director
+First Assistant Editor
+First Assistant Sound Editor
+Fix Animator
+Foley
+Foley Editor
+Gaffer
+Graphic Novel Illustrator
+Greensman
+Grip
+Gun Wrangler
+Hair Department Head
+Hair Designer
+Hair Setup
+Hair Supervisor
+Hairstylist
+Helicopter Camera
+I/O Manager
+I/O Supervisor
+Idea
+Imaging Science
+In Memory Of
+Information Systems Manager
+Interior Designer
+Key Animation
+Key Costumer
+Key Grip
+Key Hair Stylist
+Key Makeup Artist
+Key Set Costumer
+Layout
+Lead Animator
+Lead Painter
+Lead Set Dresser
+Leadman
+Legal Services
+Lighting Artist
+Lighting Camera
+Lighting Coordinator
+Lighting Director
+Lighting Manager
+Lighting Production Assistant
+Lighting Supervisor
+Lighting Technician
+Line Producer
+Loader
+Local Casting
+Location Manager
+Location Scout
+Machinist
+Makeup Artist
+Makeup Department Head
+Makeup Designer
+Makeup Effects
+Makeup Effects Designer
+Makeup Supervisor
+Manager of Operations
+Marine Coordinator
+Martial Arts Choreographer
+Master Lighting Artist
+Matchmove Supervisor
+Mechanical & Creature Designer
+Mechanical Designer
+Mix Technician
+Mixing Engineer
+Modeling
+Motion Capture Artist
+Music
+Music Director
+Music Editor
+Music Programmer
+Music Supervisor
+Musical
+Musician
+Negative Cutter
+Novel
+Orchestrator
+Original Music Composer
+Original Story
+Other
+Painter
+Photoscience Manager
+Picture Car Coordinator
+Pilot
+Playback Singer
+Poem
+Post Production Assistant
+Post Production Consulting
+Post Production Supervisor
+Post-Production Manager
+Pre-Visualization Supervisor
+Presenter
+Producer
+Production Accountant
+Production Artist
+Production Controller
+Production Coordinator
+Production Design
+Production Illustrator
+Production Intern
+Production Manager
+Production Office Assistant
+Production Office Coordinator
+Production Sound Mixer
+Production Supervisor
+Projection
+Prop Designer
+Prop Maker
+Property Master
+Propmaker
+Prosthetic Designer
+Prosthetic Makeup Artist
+Prosthetic Supervisor
+Public Relations
+Publicist
+Pyrotechnic Supervisor
+Pyrotechnician
+Quality Control Supervisor
+Radio Play
+Recording Supervision
+Researcher
+Rigging Gaffer
+Rigging Grip
+Rigging Supervisor
+Roto Supervisor
+Scenario Writer
+Scenic Artist
+Schedule Coordinator
+Score Engineer
+Scoring Mixer
+Screenplay
+Screenstory
+Script
+Script Consultant
+Script Coordinator
+Script Editor
+Script Researcher
+Script Supervisor
+Sculptor
+Seamstress
+Second Assistant Director
+Second Film Editor
+Second Unit
+Second Unit Cinematographer
+Second Unit Director of Photography
+Security
+Sequence Leads
+Sequence Supervisor
+Set Costumer
+Set Decorating Coordinator
+Set Decoration
+Set Decoration Buyer
+Set Designer
+Set Dresser
+Set Dressing Artist
+Set Dressing Manager
+Set Dressing Production Assistant
+Set Dressing Supervisor
+Set Medic
+Set Production Assistant
+Set Production Intern
+Sets & Props Artist
+Settings
+Shading
+Shoe Design
+Short Story
+Simulation & Effects Artist
+Simulation & Effects Production Assistant
+Software Engineer
+Software Team Lead
+Songs
+Sound
+Sound Design Assistant
+Sound Designer
+Sound Director
+Sound Editor
+Sound Effects
+Sound Effects Designer
+Sound Effects Editor
+Sound Engineer
+Sound Mixer
+Sound Montage Associate
+Sound Re-Recording Mixer
+Sound Recordist
+Sound mixer
+Special Effects
+Special Effects Coordinator
+Special Effects Supervisor
+Special Guest Director
+Special Sound Effects
+Stand In
+Standby Painter
+Steadicam Operator
+Steadycam
+Still Photographer
+Story
+Story Editor
+Storyboard
+Storyboard Designer
+Studio Teachers
+Stunt Coordinator
+Stunt Double
+Stunts
+Stunts Coordinator
+Supervising ADR Editor
+Supervising Animator
+Supervising Art Director
+Supervising Dialogue Editor
+Supervising Film Editor
+Supervising Music Editor
+Supervising Producer
+Supervising Sound Editor
+Supervising Sound Effects Editor
+Supervising Technical Director
+Systems Administrators & Support
+Tailor
+Tattoo Designer
+Tattooist
+Technical Supervisor
+Techno Crane Operator
+Telecine Colorist
+Teleplay
+Temp Music Editor
+Temp Sound Editor
+Thanks
+Theatre Play
+Third Assistant Director
+Title Designer
+Title Graphics
+Translator
+Transportation Captain
+Transportation Co-Captain
+Transportation Coordinator
+Underwater Camera
+Underwater Director of Photography
+Underwater Gaffer
+Unit Manager
+Unit Production Manager
+Unit Publicist
+Utility Sound
+Utility Stunts
+VFX Artist
+VFX Editor
+VFX Production Coordinator
+VFX Supervisor
+Video Assist Operator
+Video Game
+Visual Development
+Visual Effects
+Visual Effects Art Director
+Visual Effects Coordinator
+Visual Effects Design Consultant
+Visual Effects Designer
+Visual Effects Editor
+Visual Effects Producer
+Visual Effects Supervisor
+Visual Effects Technical Director
+Vocal Coach
+Wardrobe Supervisor
+Wig Designer
+Wigmaker
+Writer
+s Assistant
