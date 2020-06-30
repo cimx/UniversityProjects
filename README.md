@@ -19,5 +19,14 @@ Here i store all the programming projects i did in university for my Computer Sc
 - CG - Computer Graphics (JavaScript)
 - IA - Artificial Intelligence (Lisp)
 - RC - Computer Networks (Python)
+- CO - Compilers (C++)
+- SD - Distributed Systems (Java)
+
+4th year:
+- CVI -  Interactive Visual Communication (Mathlab)
+
+5th year:
+- LN - Natural Language (Python, R)
+- CD - DataScience (Python)
 
 (Most of these are group projects done in groups of 2 or 3 people)
