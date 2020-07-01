@@ -1,6 +1,6 @@
 # University Projects
 
-Here i store all the programming projects i did in university for my Computer Science and Engineering degree.
+Here I store all the programming projects i did in university for my Computer Science and Engineering degree.
 
 1st year:
 - FP - Foundations of Programming (Python)
